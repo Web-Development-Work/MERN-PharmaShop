@@ -1,0 +1,27 @@
+.Setting-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.9rem;
+    color: rgb(211, 211, 211);
+    font-size: 22px;
+    cursor: pointer;
+}
+.Setting-icon:hover{
+    color: #89ffd8;
+}
+.password-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+.password-div > input{
+    outline: none;
+    margin-bottom: 1rem;
+    padding: 10px;
+    width: 70%;
+    border: 2px solid rgb(194, 194, 194);
+    border-radius: 5px;
+}

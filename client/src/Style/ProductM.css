@@ -1,0 +1,19 @@
+.P-btn{
+    width: 100%;
+    margin-left: 0;
+}
+.P-view-btn{
+    width: 90%;
+    margin-left: 0;
+}
+.P-pagination{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.P-wi{
+width: 100%;
+}

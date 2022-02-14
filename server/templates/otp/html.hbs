@@ -1,0 +1,73 @@
+<style type="text/css">
+
+.header {
+  background: #8a8a8a;
+}
+
+.header .columns {
+  padding-bottom: 0;
+}
+
+.header p {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.header .wrapper-inner {
+  padding: 20px; /*controls the height of the header*/
+}
+
+.header .container {
+  background: #8a8a8a;
+}
+
+.wrapper.secondary {
+  background: #f3f3f3;
+}
+
+</style>
+<!-- move the above styles into your custom stylesheet -->
+<container>
+
+  <spacer size="16"></spacer>
+  
+  <row>
+    <columns>
+      
+      <h1>Hello, {{name}}</h1>
+      <p style="font-size: 18px;">
+        Welcome to The Click Panda To become Official Member/partner of 
+        click panda kindly deposit the selected package amount in following banks.
+      </p>
+      <h3><strong>HBL</strong></h3>
+      <p>ACCOUNT NUM:</p>
+      <p>ACCOUNT TITILE:</p>
+
+      <br /><br />
+
+      <h3><strong>BANK AL HABIB</strong></h3>
+      <p>ACCOUNT NUM:</p>
+      <p>ACCOUNT TITILE:</p>
+
+    </columns>
+  </row>
+  
+  <wrapper class="secondary">
+    <spacer size="16"></spacer>
+    <row>
+      {{!-- <columns small="12" large="6">
+        <h5>Connect With Us:</h5>
+        <menu class="vertical">
+          <item style="text-align: left;" href="#">Twitter</item>
+          <item style="text-align: left;" href="#">Facebook</item>
+          <item style="text-align: left;" href="https://tmdhosting.com">Google +</item>
+        </menu>
+      </columns> --}}
+      <columns small="12" large="6">
+        <h5>Code:</h5>
+        <h2><strong>{{message}}</strong></h2>
+      </columns>
+    </row>
+  </wrapper>
+
+</container>

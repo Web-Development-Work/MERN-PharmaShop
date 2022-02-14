@@ -1,0 +1,21 @@
+.Z-btn{
+    background-color:#58D68D !important;
+    border-color: #58D68D !important;
+    color: white;
+}
+.Z-btn:hover{
+    background-color:#2ECC71 !important;
+    border-color: #2ECC71 !important;
+    color: white;
+}
+.Z-input{
+    padding: 10px;
+    outline: none;
+    border: 3px solid #ECF0F1;
+    width: 100%;
+    margin-bottom: 20px;
+    color: gray;
+}
+.Z-input2{
+    margin-bottom: 0;
+}

@@ -1,0 +1,94 @@
+.C-main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.C-btn-div{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    position: absolute;
+    height: 200px;
+    opacity: 0;
+}
+.C-pic{
+    height: 75px;
+    width:110px
+}
+.C-btn-div:hover{
+    opacity: 100%;
+    background-color: rgba(255, 255, 255, 0.514);
+}
+.C-btn{
+    width: 90%;
+    margin-top: 10px;
+}
+.C-block{
+    background-color: #EC7063 !important;
+    border:  2px solid #EC7063 !important;
+    color: white !important;
+}
+.C-block:hover{
+    background-color: #E74C3C !important;
+    border:  2px solid #E74C3C !important;
+}
+.C-card{
+    width: 22%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.C-view{
+    background-color: #58D68D !important;
+    border:  2px solid #58D68D !important;
+    color: white !important;
+    border-radius: 5px;
+}
+.C-view:hover{
+    background-color: #2ECC71!important;
+    border-color: #2ECC71 !important;
+}
+
+.U-viwbtn{
+    background-color: #5DADE2 !important;
+    color: white !important;
+    width: 70%;
+    border:0;
+
+}
+.U-viwbtn:hover{
+    background-color: #3498DB !important;
+}
+.C-add-div{
+    position: relative;
+    width: 100%;
+    height: 60px;
+}
+.add-new-btn{
+    width: 100px;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.C-input{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 3px solid #ECF0F1;
+    margin-bottom: 10px;
+    color: gray;
+}
+.ant-btn-primary{
+    background-color: #58D68D;
+    border-color: #58D68D;
+}
+.ant-btn-primary:hover{
+    border-color: #2ECC71;
+    background-color: #2ECC71;
+}

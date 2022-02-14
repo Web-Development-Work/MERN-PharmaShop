@@ -1,0 +1,190 @@
+.PF-form-div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+}
+.PF-inputs{
+    padding: 10px;
+    outline: none;
+    border: 3px solid #ECF0F1;
+    margin-bottom: 10px;
+    color: gray;
+}
+.PF-title{
+    width: 95%;
+    margin-left: 1rem;
+}
+.PF-Brand{
+    width: 45%;
+}
+.PF-Stock{
+    width: 30%;
+    margin-left: 1rem;
+}
+.PF-d1{
+    display: flex;
+    width: 95%;
+    margin-left: 1rem;
+}
+.enabled-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    margin-bottom: 10px;
+}
+.enabled-div > h3{
+    font-size: 20px;
+    margin: 0;
+    margin-right: 10px;
+    color: gray;
+}
+.PF-AC , .PF-FC{
+    width: 50%;
+}
+.PF-AC{
+    margin-left: 10px;
+}
+.PF-size-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 10px;
+}
+.PF-size-div > h3{
+    font-size: 20px;
+    margin: 0;
+    margin-right: 15px;
+    color: gray;
+}
+.PF-PT{
+    width: 35%;
+}
+.card label{
+    margin-bottom: 0;
+}
+.PF-category{
+    width: 95%;
+    margin-left: 1rem;
+}
+.PF-select{
+    width: 35% !important;
+    border: 3px solid #ECF0F1;
+    color: gray;
+}
+.select2{
+    margin-left: 10px;
+}
+.PF-Brand-select{
+    width: 25%;
+    margin-left: 10px;
+    border: 3px solid #ECF0F1;
+    color: gray;
+}
+.PF-textarea{
+    width: 95%;
+    padding: 10px;
+    outline: none;
+    border: 3px solid #ECF0F1;
+    margin-bottom: 10px;
+    color: gray;
+    margin-left: 1rem;
+    margin-top: 10px;
+    height: 120px;
+}
+.tt2{
+    margin-top: 0;
+}
+.PF-Form{
+    margin-left: 1rem;
+    width: 95%;
+    margin-top: 10px;
+}
+.PF-Upload-img{
+    width: 95%;
+    margin-left: 1rem;
+}
+.MuiDropzoneArea-text{
+    color: gray;
+}
+.MuiSvgIcon-root{
+    color: gray !important;
+}
+.PF-btn{
+    width: 95%;
+    margin-left: 1rem;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.ant-switch-checked{
+    background-color: #58D68D !important;
+}
+.ant-radio-inner::after{
+    background-color: #58D68D !important;
+}
+.ant-radio-checked .ant-radio-inner{
+    border-color: #58D68D !important;
+}
+.ant-radio-inner:hover{
+    border-color: #58D68D !important;
+}
+.PF-category{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.PF-S{
+    margin-left: 15px;
+}
+@media (max-width : 490px){
+    .PF-title , .PF-Form, .PF-textarea, .PF-Upload-img, .PF-btn{
+        width: 90%;
+    }
+    .PF-d1{
+        flex-direction: column;
+    }
+    .PF-Stock{
+        width: 95%;
+        margin-left: 0;
+    }
+    .enabled-div{
+        width: 90%;
+        justify-content: flex-start;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .PF-FC, .PF-PT ,.PF-Brand,.PF-size-div {
+        width: 95%;
+    }
+    .PF-AC{
+        width: 95%;
+        margin-left: 0;
+    }
+    .PF-size-div > h3{
+        width: 20%;
+    }
+    .PF-category{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin-left: 1rem;
+    }
+    .PF-Brand-select{
+        margin-left: 0;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .PF-select{
+        width: 100% !important;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .select2{
+        margin-left: 0;
+    }
+    
+}

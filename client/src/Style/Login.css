@@ -1,0 +1,100 @@
+.L-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../assets//img/Login.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.L-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 35%;
+    position: absolute;
+    right: 13%;
+    background-color: #eef6f3;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.L-input{
+    width: 70%;
+    padding: 10px;
+    outline: none;
+    border: 3px solid #b7ece2;
+    margin-bottom: 20px;
+    color: gray;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 20px
+}
+.L-input:hover{
+    border-color: #9de0d4;
+}
+.L-input::placeholder {
+    color:gray;
+}
+.L-heading{
+    font-size: 35px;
+    font-weight:500;
+    color: #4ecfbc;
+    float: left;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    width:70%;
+}
+.L-btn{
+    background-color: #6cdbca;
+    width:70%;
+    border: 2px solid #6cdbca;
+    color: white;
+    padding:7px 10px;
+    border-radius:5px;
+    font-weight: 900;
+    font-size:20px;
+    margin-top:10px;
+    
+}
+.L-btn:hover{
+    background-color: transparent;
+    border-color: #6cdbca;
+    color:#6cdbca; 
+}
+.L-logo{
+    width:150px;
+    height:120px;
+    cursor: default;
+    opacity: 90%;
+    margin-top: 1rem;
+}
+.D-li{
+    list-style: decimal;
+    margin-bottom: 30px;
+}
+.D-sold{
+    background-color: #228071;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+.D-sold-div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.D-sold-div > p{
+    margin: 0;
+    margin-left: 5px;
+    margin-top: 3px;
+}
+.D-s{
+    color: #228071;
+    margin: 0;
+}
+.ct-label.ct-vertical.ct-start{
+    width: 35px !important;
+}

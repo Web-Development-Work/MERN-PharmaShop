@@ -1,0 +1,62 @@
+.U-profile-pic{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.U-btn{
+    width:70%;
+    background-color: #EC7063 !important;
+    border: 0;
+}
+.U-btn:hover{
+    background-color: #E74C3C !important;
+}
+.UB-btn{
+    background-color: #58D68D !important;
+}
+.UB-btn:hover{
+    background-color: #2ECC71 !important;
+}
+.U-input{
+    padding: 10px;
+    outline: none;
+    border: 3px solid #ECF0F1;
+    width: 100%;
+    margin-bottom: 20px;
+    color: gray;
+}
+.U-search{
+    position: relative;
+}
+.search-icon{
+    position: absolute;
+    top: 20%;
+    right: 2%;
+    font-size: 25px !important;
+    color: gray;
+    cursor: pointer;
+}
+.search-icon:hover{
+    color: black;
+}
+.modal-div{
+    display: flex;
+    width: 100%;
+    height: 25vh;
+    margin-bottom: 1rem;
+    background-color: #ECF0F1;
+}
+.modal-p1{
+    width:55%;
+    margin-left: 20px;
+}
+.modal-p2{
+    width:45%;
+}
+.modal-p2 .map-container {
+    height: 25vh;
+}
+.U-textarea{
+    height: 150px;
+    margin-bottom: 0;
+}

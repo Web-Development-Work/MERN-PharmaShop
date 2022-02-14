@@ -1,0 +1,73 @@
+.O-item{
+    margin: 0;
+    text-transform: capitalize;
+    color: gray;
+}
+.O-zoneAddress{
+    margin-top: 15px;
+}
+.O-item{
+    font-weight: 900;
+}
+.O-btn{
+    width: 100%;
+}
+.O-view-btn{
+    background-color:#00ff6e !important;
+    border-color: #000000 !important;
+}
+.O-map-btn{
+    background-color:#85C1E9 !important;
+    border-color: #85C1E9 !important;
+}
+.O-delete-btn{
+    background-color:#F1948A !important;
+    border-color: #F1948A !important;
+}
+.O-view-btn:hover{
+    background-color:#58D68D !important;
+    border-color: #58D68D !important;
+}
+.O-map-btn:hover{
+    background-color:#5DADE2 !important;
+    border-color: #5DADE2 !important;
+}
+.O-delete-btn:hover{
+    background-color:#EC7063 !important;
+    border-color: #EC7063 !important;
+}
+.OM-modal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.h4-heading{
+    color: #58D68D ;
+}
+.OM-modal2{
+    display: flex;
+    align-items: center;
+}
+.OM-modal2 > div {
+    width:42%
+}
+.O-item-space{
+    margin-top: 20px;
+    color: #58D68D;
+}
+.OM-GT{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.OM-color{
+    color: #58D68D ;
+}
+.O-update{
+    background-color: #5DADE2 !important;
+    border-color: #5DADE2 !important;
+}
+.O-update:hover{
+    background-color: #3498DB !important;
+    border-color: #3498DB !important;
+}

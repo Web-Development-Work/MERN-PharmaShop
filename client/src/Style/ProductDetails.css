@@ -1,0 +1,180 @@
+.PD-images{
+    width: 100%;
+    height: 380px;
+    border-radius: 6px;
+}
+.PD-Carousal-div{
+    width: 97%;
+    margin-left: 1rem;
+    border: #58D68D solid 4px;
+    border-radius: 10px;
+}
+.PD-Detail-div{
+    width: 97%;
+    margin-left: 1rem;
+    margin-top: 10px;
+}
+.PD-headings{
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 0;
+}
+.PD-values{
+    color: gray;
+    text-transform: capitalize;
+    margin-left: 10px;
+    font-size: 18px;
+}
+.PD-title > span{
+    color: #58D68D;
+    font-weight: bold;
+}
+.PD-category{
+ margin-bottom: 20px;   
+}
+.PD-Sub{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.PD-subC{
+    margin: 5px;
+    padding: 10px 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 6px 16px rgba(0,0,0,0.12);
+    border-radius: 10px;
+}
+.PD-subC > span{
+    margin: 0;
+}
+.card1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    box-shadow: none !important;
+    border: none;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.card2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0;
+}
+.card3{
+    box-shadow: none !important;
+    border: none;
+    margin-bottom: 6px;
+}
+.card4{
+    padding: 20px;
+}
+.PD-Card{
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
+    border-radius: 10px;
+}
+.PD-c3-div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.c3-Acard ,  .c3-Fcard , .c3-Scard{
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
+}
+.PD-div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.PD-htu{
+    width: 48%;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
+    padding: 10px;
+    align-items: center;
+    border-radius: 10px;
+}
+.PD-desc{
+    width: 48%;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
+    padding: 10px;
+    align-items: center;
+    border-radius: 10px;
+
+}
+.PD-headings2{
+    font-size: 20px;
+    font-weight: 900;
+}
+.ant-carousel .slick-dots li{
+    background-color: #58D68D;
+    padding: 7px 20px;
+    margin-left: -7px;
+    border-radius: 5px;
+}
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.PD-edit{
+    width: 100px;
+    padding: 5px 20px;
+}
+.PD-sub{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    margin-left: -5px;
+}
+@media (max-width : 490px){
+    .PD-Carousal-div{
+        width: 92%;
+    }
+    .PD-images{
+        height: 250px;
+    }
+    .card1 , .card2{
+        flex-direction: column;
+    }
+    .PD-title{
+        margin-bottom: 10px;
+    }
+    .card2{
+        width: 95%;
+    }
+    .PD-c3-div{
+        flex-direction: column;
+        width: 95%;
+    }
+    .c3-Acard, .c3-Fcard, .c3-Scard{
+        width: 100%;
+        margin-bottom: 9px;
+    }
+    .PD-Sub{
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
+    .PD-subC{
+        width: 30%;
+        padding: 5px 8px;
+        text-align: center;
+        margin: 3px;
+    }
+    .PD-subC > span{
+        font-size: 14px;
+    }
+    .PD-div{
+        flex-direction: column;
+        width: 95%;
+    }
+    .PD-desc , .PD-htu{
+        width: 100%;
+    }
+}

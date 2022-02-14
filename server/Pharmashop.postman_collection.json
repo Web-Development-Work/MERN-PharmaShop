@@ -1,0 +1,3033 @@
+{
+	"info": {
+		"_postman_id": "8f77b6f8-213e-4dc1-b753-4ad3e461e405",
+		"name": "Pharmashop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FAQs APi",
+			"item": [
+				{
+					"name": "Add FAQ",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"question\":\"What is Pharmashop?\",\n    \"answer\":\"Pharmashop is an eCommerce platform!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pharmashopURL}}/api/addFAQ",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"addFAQ"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update FAQ",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"5fc023aa08ec745443df2127\",\n    \"question\":\"Updated Question\",\n    \"answer\":\"Updated answer new by postman\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/editFAQ",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"editFAQ"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All FAQs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/getAllFAQs",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"getAllFAQs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete FAQ",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"60dd99d5d6da9b08bb71be4d\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/deleteFAQ",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"deleteFAQ"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BrandsAPI",
+			"item": [
+				{
+					"name": "Add Brand",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Abbvie",
+									"type": "text"
+								},
+								{
+									"key": "fileData",
+									"type": "file",
+									"src": "/C:/Users/src/Desktop/Capture1.PNG"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/addBrand",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"addBrand"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Brand Image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "60a524083699333298d15bf0",
+									"type": "text"
+								},
+								{
+									"key": "fileData",
+									"type": "file",
+									"src": "/Users/ishop/Downloads/PFIZER.jpg"
+								},
+								{
+									"key": "name",
+									"value": "PFizerr",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/changeBrandImage",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"changeBrandImage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Brands",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{pharmashopURL}}/api/getBrands",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"getBrands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change brand name",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"60a524083699333298d15bf0\",\n    \"name\":\"Pfizer\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/brandName",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"brandName"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Disable Brand",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"60a524083699333298d15bf0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/disableBrand",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"disableBrand"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Brand",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Abb\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/searchBrands",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"searchBrands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enable Brand",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"60a524083699333298d15bf0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/enableBrand",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"enableBrand"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Brands with products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{pharmashopURL}}/api/getallbrandswithproducts",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"getallbrandswithproducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Random Brands",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:5600/api/randomBrands",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"api",
+								"randomBrands"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CategoryAPI",
+			"item": [
+				{
+					"name": "Add Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Beauty Products",
+									"type": "text"
+								},
+								{
+									"key": "fileData",
+									"type": "file",
+									"src": "/C:/Users/src/Desktop/Capture1.PNG"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://30feed72e70c.ngrok.io/api/addCategory",
+							"protocol": "https",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"addCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Category Cover",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "60a5b863c63e197a3a057075",
+									"type": "text"
+								},
+								{
+									"key": "fileData",
+									"type": "file",
+									"src": "/Users/ishop/Downloads/diet & fitness.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://30feed72e70c.ngrok.io/api/changeCategoryImage",
+							"protocol": "https",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"changeCategoryImage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Category Name",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"60a5b863c63e197a3a057075\",\n    \"name\":\"Fitness & Diet\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://30feed72e70c.ngrok.io/api/categoryName",
+							"protocol": "https",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"categoryName"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Sryi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/searchCategory",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"searchCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Subcategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "faiza creams",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "60eda3bd361d145c96e99b5e",
+									"type": "text"
+								},
+								{
+									"key": "fileData",
+									"type": "file",
+									"src": "/C:/Users/src/Desktop/Capture.PNG"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/addSubcategory",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"addSubcategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Subcategory Name",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"60a5b82bc63e197a3a057072\",\n    \"subcategory\":\"60a5bc593d7445220ca5f11b\",\n    \"name\":\"Pain Relief\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/updateSubcategoryName",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"updateSubcategoryName"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Subcategory Image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "60a5b82bc63e197a3a057072",
+									"type": "text"
+								},
+								{
+									"key": "subcategory",
+									"value": "60a5bc593d7445220ca5f11b",
+									"type": "text"
+								},
+								{
+									"key": "fileData",
+									"type": "file",
+									"src": "/Users/ishop/Downloads/pain relief.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/changeSubcategoryImage",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"changeSubcategoryImage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Categories",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{pharmashopURL}}/api/getAllCategories",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"getAllCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category Status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"60dc2dcb4146fe39045012a5\",\n    \"status\":false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/updateCategoryStatus",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"updateCategoryStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Subcategory Status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"category\":\"60dc2dcb4146fe39045012a5\",\n    \"subcategory\":\"60dc62b54146fe39045012e0\",\n    \"status\":false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/updateSubCatStatus",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"updateSubCatStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"60a5b863c63e197a3a057075\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pharmashopURL}}/api/deleteCategory",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"deleteCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all categories with products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5600/api/getallcategorieswithproducts",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"api",
+								"getallcategorieswithproducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bulk Categories",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:5600/api/bulkCategories",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"api",
+								"bulkCategories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProductsAPI",
+			"item": [
+				{
+					"name": "Add Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Paracetamol New",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "60dc2dcb4146fe39045012a5",
+									"type": "text"
+								},
+								{
+									"key": "subcategory",
+									"value": "60a5bc8a3d7445220ca5f11d",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "This is a test product added from Postman.",
+									"type": "text"
+								},
+								{
+									"key": "howToUse",
+									"value": "isdjpf saofjrefpojdspog jerpojgopdfj sdopaewjpofjwjhiw ehwoafgud",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "60a523873699333298d15bec",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "580",
+									"type": "text"
+								},
+								{
+									"key": "fakeCost",
+									"value": "128",
+									"type": "text"
+								},
+								{
+									"key": "actualCost",
+									"value": "108",
+									"type": "text"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": [
+										"/Users/ishop/Downloads/It's Time to reinvent-01.jpg",
+										"/Users/ishop/Downloads/APP 1.png"
+									]
+								},
+								{
+									"key": "size",
+									"value": "M",
+									"type": "text"
+								},
+								{
+									"key": "productType",
+									"value": "Tablet",
+									"type": "text"
+								},
+								{
+									"key": "form",
+									"value": "Solid",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5600/api/addProduct",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"api",
+								"addProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bulk Products",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"products\": [\n        {\n            \"title\": \"SUSTIVA\",\n            \"brand\": \"60a523763699333298d15beb\",\n            \"description\": \"curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum\",\n            \"howToUse\": \"morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat\",\n            \"stock\": 2954,\n            \"fakeCost\": 1385,\n            \"actualCost\": 760,\n            \"form\": \"nullam sit\",\n            \"productType\": \"vitae\",\n            \"size\": \"L\"\n        },\n        {\n            \"title\": \"Sani-Silk\",\n            \"brand\": \"60a523873699333298d15bec\",\n            \"description\": \"potenti nullam porttitor lacus at turpis donec posuere metus vitae\",\n            \"howToUse\": \"rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula\",\n            \"stock\": 2359,\n            \"fakeCost\": 8622,\n            \"actualCost\": 7313,\n            \"form\": \"donec\",\n            \"productType\": \"vestibulum\",\n            \"size\": \"S\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/bulkProducts",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"bulkProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products by page",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{pharmashopURL}}/api/getProducts2",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"getProducts2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Products by page",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://30feed72e70c.ngrok.io/api/getProducts1",
+									"protocol": "http",
+									"host": [
+										"30feed72e70c",
+										"ngrok",
+										"io"
+									],
+									"path": [
+										"api",
+										"getProducts1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32967"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 21 May 2021 11:52:10 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"80c7-Mxym2zDAhG88fEBWZAU/QH5bnNE\""
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Ratelimit-Limit",
+									"value": "200"
+								},
+								{
+									"key": "X-Ratelimit-Remaining",
+									"value": "199"
+								},
+								{
+									"key": "X-Ratelimit-Reset",
+									"value": "1621597973"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success\",\n    \"doc\": {\n        \"products\": [\n            {\n                \"images\": [\n                    \"http://dummyimage.com/386x297.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/293x233.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/368x394.png/dddddd/000000\"\n                ],\n                \"createdDate\": \"2021-05-20T11:49:03.841Z\",\n                \"enabled\": true,\n                \"sold\": 625,\n                \"views\": 4741,\n                \"_id\": \"60a64d4f00498a060d6a06a9\",\n                \"title\": \"ANTIBACTERIAL HSOAP\",\n                \"brand\": {\n                    \"createdDate\": \"2021-05-19T12:18:58.691Z\",\n                    \"enabled\": true,\n                    \"_id\": \"60a524083699333298d15bf0\",\n                    \"name\": \"Pfizer\",\n                    \"image\": \"0e21554e2d0b87560b7f43e95268233d\",\n                    \"__v\": 0\n                },\n                \"description\": \"adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget\",\n                \"howToUse\": \"nam congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh\",\n                \"stock\": 1241,\n                \"fakeCost\": 1380,\n                \"actualCost\": 4190,\n                \"form\": \"risus auctor\",\n                \"productType\": \"interdum\",\n                \"size\": \"S\",\n                \"category\": {\n                    \"createdDate\": \"2021-05-19T15:08:47.043Z\",\n                    \"_id\": \"60a5b82bc63e197a3a057072\",\n                    \"name\": \"Medications\",\n                    \"image\": \"437e1745d0fbeb827ef7df28c4b7f986\",\n                    \"subcategories\": [\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc593d7445220ca5f11b\",\n                            \"name\": \"Pain Relief\",\n                            \"image\": \"7fadae79745a72438574b033c29e0113\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc783d7445220ca5f11c\",\n                            \"name\": \"Cough, Cold & Flue\",\n                            \"image\": \"4cfed0d069fd3afaa88a89fd3c099d94\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc8a3d7445220ca5f11d\",\n                            \"name\": \"Allergy\",\n                            \"image\": \"c7492a81b781fbc21e5c56881e7612a2\"\n                        }\n                    ],\n                    \"__v\": 0\n                },\n                \"subcategory\": \"60a5bc8a3d7445220ca5f11d\",\n                \"__v\": 0,\n                \"itemSubCategory\": {\n                    \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                    \"_id\": \"60a5bc8a3d7445220ca5f11d\",\n                    \"name\": \"Allergy\",\n                    \"image\": \"c7492a81b781fbc21e5c56881e7612a2\"\n                }\n            },\n            {\n                \"images\": [\n                    \"http://dummyimage.com/386x297.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/293x233.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/368x394.png/dddddd/000000\"\n                ],\n                \"createdDate\": \"2021-05-20T11:49:03.841Z\",\n                \"enabled\": true,\n                \"sold\": 1672,\n                \"views\": 4154,\n                \"_id\": \"60a64d4f00498a060d6a06aa\",\n                \"title\": \"Armour Thyroid\",\n                \"brand\": {\n                    \"createdDate\": \"2021-05-19T12:18:58.691Z\",\n                    \"enabled\": true,\n                    \"_id\": \"60a523d93699333298d15bed\",\n                    \"name\": \"AstraZeneca\",\n                    \"image\": \"9eddf2548802bc5c7ca45b1967745c7b\",\n                    \"__v\": 0\n                },\n                \"description\": \"lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit\",\n                \"howToUse\": \"vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada\",\n                \"stock\": 2620,\n                \"fakeCost\": 2676,\n                \"actualCost\": 4729,\n                \"form\": \"felis sed\",\n                \"productType\": \"tortor risus\",\n                \"size\": \"3XL\",\n                \"category\": {\n                    \"createdDate\": \"2021-05-19T15:08:47.043Z\",\n                    \"_id\": \"60a5b82bc63e197a3a057072\",\n                    \"name\": \"Medications\",\n                    \"image\": \"437e1745d0fbeb827ef7df28c4b7f986\",\n                    \"subcategories\": [\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc593d7445220ca5f11b\",\n                            \"name\": \"Pain Relief\",\n                            \"image\": \"7fadae79745a72438574b033c29e0113\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc783d7445220ca5f11c\",\n                            \"name\": \"Cough, Cold & Flue\",\n                            \"image\": \"4cfed0d069fd3afaa88a89fd3c099d94\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc8a3d7445220ca5f11d\",\n                            \"name\": \"Allergy\",\n                            \"image\": \"c7492a81b781fbc21e5c56881e7612a2\"\n                        }\n                    ],\n                    \"__v\": 0\n                },\n                \"subcategory\": \"60a5bc593d7445220ca5f11b\",\n                \"__v\": 0,\n                \"itemSubCategory\": {\n                    \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                    \"_id\": \"60a5bc593d7445220ca5f11b\",\n                    \"name\": \"Pain Relief\",\n                    \"image\": \"7fadae79745a72438574b033c29e0113\"\n                }\n            },\n            {\n                \"images\": [\n                    \"http://dummyimage.com/386x297.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/293x233.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/368x394.png/dddddd/000000\"\n                ],\n                \"createdDate\": \"2021-05-20T11:49:03.841Z\",\n                \"enabled\": true,\n                \"sold\": 1320,\n                \"views\": 2504,\n                \"_id\": \"60a64d4f00498a060d6a06ab\",\n                \"title\": \"Hangover Relief\",\n                \"brand\": {\n                    \"createdDate\": \"2021-05-19T12:18:58.691Z\",\n                    \"enabled\": true,\n                    \"_id\": \"60a523f83699333298d15bef\",\n                    \"name\": \"GSK\",\n                    \"image\": \"4e44d82fb2fdd6e484657a2f8203ad9c\",\n                    \"__v\": 0\n                },\n                \"description\": \"adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue\",\n                \"howToUse\": \"orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum\",\n                \"stock\": 4960,\n                \"fakeCost\": 4105,\n                \"actualCost\": 2455,\n                \"form\": \"nam\",\n                \"productType\": \"in purus\",\n                \"size\": \"L\",\n                \"category\": {\n                    \"createdDate\": \"2021-05-19T15:08:47.043Z\",\n                    \"_id\": \"60a5b852c63e197a3a057074\",\n                    \"name\": \"Beauty\",\n                    \"image\": \"ca1e2e24ea1e22b57ae9052d2447f990\",\n                    \"subcategories\": [\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bcc43d7445220ca5f11e\",\n                            \"name\": \"Face Washes\",\n                            \"image\": \"61db21d3587d96f3ee107b650e88ab15\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bcd43d7445220ca5f11f\",\n                            \"name\": \"Hair Care\",\n                            \"image\": \"89fb77583bd370281cabee6c85f351de\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bcee3d7445220ca5f120\",\n                            \"name\": \"Bath and body\",\n                            \"image\": \"5566c35ba4ae4d1f190c52df448c3abe\"\n                        }\n                    ],\n                    \"__v\": 0\n                },\n                \"subcategory\": \"60a5bcd43d7445220ca5f11f\",\n                \"__v\": 0,\n                \"itemSubCategory\": {\n                    \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                    \"_id\": \"60a5bcd43d7445220ca5f11f\",\n                    \"name\": \"Hair Care\",\n                    \"image\": \"89fb77583bd370281cabee6c85f351de\"\n                }\n            },\n            {\n                \"images\": [\n                    \"http://dummyimage.com/386x297.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/293x233.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/368x394.png/dddddd/000000\"\n                ],\n                \"createdDate\": \"2021-05-20T11:49:03.841Z\",\n                \"enabled\": true,\n                \"sold\": 1001,\n                \"views\": 1583,\n                \"_id\": \"60a64d4f00498a060d6a06ac\",\n                \"title\": \"CVS PHARMACY\",\n                \"brand\": {\n                    \"createdDate\": \"2021-05-19T12:18:58.691Z\",\n                    \"enabled\": true,\n                    \"_id\": \"60a523d93699333298d15bed\",\n                    \"name\": \"AstraZeneca\",\n                    \"image\": \"9eddf2548802bc5c7ca45b1967745c7b\",\n                    \"__v\": 0\n                },\n                \"description\": \"iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo\",\n                \"howToUse\": \"maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui\",\n                \"stock\": 3118,\n                \"fakeCost\": 3097,\n                \"actualCost\": 2973,\n                \"form\": \"primis in\",\n                \"productType\": \"velit\",\n                \"size\": \"2XL\",\n                \"category\": {\n                    \"createdDate\": \"2021-05-19T15:08:47.043Z\",\n                    \"_id\": \"60a5b852c63e197a3a057074\",\n                    \"name\": \"Beauty\",\n                    \"image\": \"ca1e2e24ea1e22b57ae9052d2447f990\",\n                    \"subcategories\": [\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bcc43d7445220ca5f11e\",\n                            \"name\": \"Face Washes\",\n                            \"image\": \"61db21d3587d96f3ee107b650e88ab15\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bcd43d7445220ca5f11f\",\n                            \"name\": \"Hair Care\",\n                            \"image\": \"89fb77583bd370281cabee6c85f351de\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bcee3d7445220ca5f120\",\n                            \"name\": \"Bath and body\",\n                            \"image\": \"5566c35ba4ae4d1f190c52df448c3abe\"\n                        }\n                    ],\n                    \"__v\": 0\n                },\n                \"subcategory\": \"60a5bcc43d7445220ca5f11e\",\n                \"__v\": 0,\n                \"itemSubCategory\": {\n                    \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                    \"_id\": \"60a5bcc43d7445220ca5f11e\",\n                    \"name\": \"Face Washes\",\n                    \"image\": \"61db21d3587d96f3ee107b650e88ab15\"\n                }\n            },\n            {\n                \"images\": [\n                    \"http://dummyimage.com/386x297.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/293x233.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/368x394.png/dddddd/000000\"\n                ],\n                \"createdDate\": \"2021-05-20T11:49:03.841Z\",\n                \"enabled\": true,\n                \"sold\": 3520,\n                \"views\": 3583,\n                \"_id\": \"60a64d4f00498a060d6a06ad\",\n                \"title\": \"Healthy Accents athletes foot\",\n                \"brand\": {\n                    \"createdDate\": \"2021-05-19T12:18:58.691Z\",\n                    \"enabled\": true,\n                    \"_id\": \"60a523763699333298d15beb\",\n                    \"name\": \"Avlon\",\n                    \"image\": \"8f2bfea0c8951dde21b356e7b3e92d66\",\n                    \"__v\": 0\n                },\n                \"description\": \"tellus nisi eu orci mauris lacinia sapien quis libero nullam\",\n                \"howToUse\": \"elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue\",\n                \"stock\": 2993,\n                \"fakeCost\": 5463,\n                \"actualCost\": 3522,\n                \"form\": \"pede venenatis\",\n                \"productType\": \"in libero\",\n                \"size\": \"XL\",\n                \"category\": {\n                    \"createdDate\": \"2021-05-19T15:08:47.043Z\",\n                    \"_id\": \"60a5b82bc63e197a3a057072\",\n                    \"name\": \"Medications\",\n                    \"image\": \"437e1745d0fbeb827ef7df28c4b7f986\",\n                    \"subcategories\": [\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc593d7445220ca5f11b\",\n                            \"name\": \"Pain Relief\",\n                            \"image\": \"7fadae79745a72438574b033c29e0113\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc783d7445220ca5f11c\",\n                            \"name\": \"Cough, Cold & Flue\",\n                            \"image\": \"4cfed0d069fd3afaa88a89fd3c099d94\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc8a3d7445220ca5f11d\",\n                            \"name\": \"Allergy\",\n                            \"image\": \"c7492a81b781fbc21e5c56881e7612a2\"\n                        }\n                    ],\n                    \"__v\": 0\n                },\n                \"subcategory\": \"60a5bc783d7445220ca5f11c\",\n                \"__v\": 0,\n                \"itemSubCategory\": {\n                    \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                    \"_id\": \"60a5bc783d7445220ca5f11c\",\n                    \"name\": \"Cough, Cold & Flue\",\n                    \"image\": \"4cfed0d069fd3afaa88a89fd3c099d94\"\n                }\n            },\n            {\n                \"images\": [\n                    \"http://dummyimage.com/386x297.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/293x233.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/368x394.png/dddddd/000000\"\n                ],\n                \"createdDate\": \"2021-05-20T11:49:03.841Z\",\n                \"enabled\": true,\n                \"sold\": 2783,\n                \"views\": 3458,\n                \"_id\": \"60a64d4f00498a060d6a06ae\",\n                \"title\": \"Mucinex Fast-Max\",\n                \"brand\": {\n                    \"createdDate\": \"2021-05-19T12:18:58.691Z\",\n                    \"enabled\": true,\n                    \"_id\": \"60a523ef3699333298d15bee\",\n                    \"name\": \"Johnson & Johnson\",\n                    \"image\": \"9932b27ca60369c90af7376b4e8aa792\",\n                    \"__v\": 0\n                },\n                \"description\": \"bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at\",\n                \"howToUse\": \"ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer\",\n                \"stock\": 5756,\n                \"fakeCost\": 3864,\n                \"actualCost\": 6785,\n                \"form\": \"sapien\",\n                \"productType\": \"vestibulum\",\n                \"size\": \"2XL\",\n                \"category\": {\n                    \"createdDate\": \"2021-05-19T15:08:47.043Z\",\n                    \"_id\": \"60a5b82bc63e197a3a057072\",\n                    \"name\": \"Medications\",\n                    \"image\": \"437e1745d0fbeb827ef7df28c4b7f986\",\n                    \"subcategories\": [\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc593d7445220ca5f11b\",\n                            \"name\": \"Pain Relief\",\n                            \"image\": \"7fadae79745a72438574b033c29e0113\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc783d7445220ca5f11c\",\n                            \"name\": \"Cough, Cold & Flue\",\n                            \"image\": \"4cfed0d069fd3afaa88a89fd3c099d94\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc8a3d7445220ca5f11d\",\n                            \"name\": \"Allergy\",\n                            \"image\": \"c7492a81b781fbc21e5c56881e7612a2\"\n                        }\n                    ],\n                    \"__v\": 0\n                },\n                \"subcategory\": \"60a5bc783d7445220ca5f11c\",\n                \"__v\": 0,\n                \"itemSubCategory\": {\n                    \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                    \"_id\": \"60a5bc783d7445220ca5f11c\",\n                    \"name\": \"Cough, Cold & Flue\",\n                    \"image\": \"4cfed0d069fd3afaa88a89fd3c099d94\"\n                }\n            },\n            {\n                \"images\": [\n                    \"http://dummyimage.com/386x297.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/293x233.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/368x394.png/dddddd/000000\"\n                ],\n                \"createdDate\": \"2021-05-20T11:49:03.841Z\",\n                \"enabled\": true,\n                \"sold\": 318,\n                \"views\": 3150,\n                \"_id\": \"60a64d4f00498a060d6a06b0\",\n                \"title\": \"NITROGEN\",\n                \"brand\": {\n                    \"createdDate\": \"2021-05-19T12:18:58.691Z\",\n                    \"enabled\": true,\n                    \"_id\": \"60a523873699333298d15bec\",\n                    \"name\": \"Abbott\",\n                    \"image\": \"2134be3999443ce451ee12cb3c2bca51\",\n                    \"__v\": 0\n                },\n                \"description\": \"vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam\",\n                \"howToUse\": \"vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean\",\n                \"stock\": 4241,\n                \"fakeCost\": 2325,\n                \"actualCost\": 2550,\n                \"form\": \"et ultrices\",\n                \"productType\": \"lacus purus\",\n                \"size\": \"3XL\",\n                \"category\": {\n                    \"createdDate\": \"2021-05-19T15:08:47.043Z\",\n                    \"_id\": \"60a5b852c63e197a3a057074\",\n                    \"name\": \"Beauty\",\n                    \"image\": \"ca1e2e24ea1e22b57ae9052d2447f990\",\n                    \"subcategories\": [\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bcc43d7445220ca5f11e\",\n                            \"name\": \"Face Washes\",\n                            \"image\": \"61db21d3587d96f3ee107b650e88ab15\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bcd43d7445220ca5f11f\",\n                            \"name\": \"Hair Care\",\n                            \"image\": \"89fb77583bd370281cabee6c85f351de\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bcee3d7445220ca5f120\",\n                            \"name\": \"Bath and body\",\n                            \"image\": \"5566c35ba4ae4d1f190c52df448c3abe\"\n                        }\n                    ],\n                    \"__v\": 0\n                },\n                \"subcategory\": \"60a5bcee3d7445220ca5f120\",\n                \"__v\": 0,\n                \"itemSubCategory\": {\n                    \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                    \"_id\": \"60a5bcee3d7445220ca5f120\",\n                    \"name\": \"Bath and body\",\n                    \"image\": \"5566c35ba4ae4d1f190c52df448c3abe\"\n                }\n            },\n            {\n                \"images\": [\n                    \"http://dummyimage.com/386x297.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/293x233.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/368x394.png/dddddd/000000\"\n                ],\n                \"createdDate\": \"2021-05-20T11:49:03.841Z\",\n                \"enabled\": true,\n                \"sold\": 266,\n                \"views\": 1605,\n                \"_id\": \"60a64d4f00498a060d6a06af\",\n                \"title\": \"Vag Pack\",\n                \"brand\": {\n                    \"createdDate\": \"2021-05-19T12:18:58.691Z\",\n                    \"enabled\": true,\n                    \"_id\": \"60a523873699333298d15bec\",\n                    \"name\": \"Abbott\",\n                    \"image\": \"2134be3999443ce451ee12cb3c2bca51\",\n                    \"__v\": 0\n                },\n                \"description\": \"sollicitudin ut suscipit a feugiat et eros vestibulum ac est\",\n                \"howToUse\": \"nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque\",\n                \"stock\": 2680,\n                \"fakeCost\": 6701,\n                \"actualCost\": 1327,\n                \"form\": \"neque\",\n                \"productType\": \"ligula\",\n                \"size\": \"M\",\n                \"category\": {\n                    \"createdDate\": \"2021-05-19T15:08:47.043Z\",\n                    \"_id\": \"60a5b82bc63e197a3a057072\",\n                    \"name\": \"Medications\",\n                    \"image\": \"437e1745d0fbeb827ef7df28c4b7f986\",\n                    \"subcategories\": [\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc593d7445220ca5f11b\",\n                            \"name\": \"Pain Relief\",\n                            \"image\": \"7fadae79745a72438574b033c29e0113\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc783d7445220ca5f11c\",\n                            \"name\": \"Cough, Cold & Flue\",\n                            \"image\": \"4cfed0d069fd3afaa88a89fd3c099d94\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc8a3d7445220ca5f11d\",\n                            \"name\": \"Allergy\",\n                            \"image\": \"c7492a81b781fbc21e5c56881e7612a2\"\n                        }\n                    ],\n                    \"__v\": 0\n                },\n                \"subcategory\": \"60a5bc783d7445220ca5f11c\",\n                \"__v\": 0,\n                \"itemSubCategory\": {\n                    \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                    \"_id\": \"60a5bc783d7445220ca5f11c\",\n                    \"name\": \"Cough, Cold & Flue\",\n                    \"image\": \"4cfed0d069fd3afaa88a89fd3c099d94\"\n                }\n            },\n            {\n                \"images\": [\n                    \"http://dummyimage.com/386x297.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/293x233.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/368x394.png/dddddd/000000\"\n                ],\n                \"createdDate\": \"2021-05-20T11:49:03.841Z\",\n                \"enabled\": true,\n                \"sold\": 725,\n                \"views\": 4235,\n                \"_id\": \"60a64d4f00498a060d6a06b1\",\n                \"title\": \"Spatheraphy\",\n                \"brand\": {\n                    \"createdDate\": \"2021-05-19T12:18:58.691Z\",\n                    \"enabled\": true,\n                    \"_id\": \"60a524083699333298d15bf0\",\n                    \"name\": \"Pfizer\",\n                    \"image\": \"0e21554e2d0b87560b7f43e95268233d\",\n                    \"__v\": 0\n                },\n                \"description\": \"sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in\",\n                \"howToUse\": \"sapien cursus vestibulum proin eu mi nulla ac enim in\",\n                \"stock\": 3355,\n                \"fakeCost\": 8349,\n                \"actualCost\": 425,\n                \"form\": \"nam\",\n                \"productType\": \"etiam pretium\",\n                \"size\": \"S\",\n                \"category\": {\n                    \"createdDate\": \"2021-05-19T15:08:47.043Z\",\n                    \"_id\": \"60a5b82bc63e197a3a057072\",\n                    \"name\": \"Medications\",\n                    \"image\": \"437e1745d0fbeb827ef7df28c4b7f986\",\n                    \"subcategories\": [\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc593d7445220ca5f11b\",\n                            \"name\": \"Pain Relief\",\n                            \"image\": \"7fadae79745a72438574b033c29e0113\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc783d7445220ca5f11c\",\n                            \"name\": \"Cough, Cold & Flue\",\n                            \"image\": \"4cfed0d069fd3afaa88a89fd3c099d94\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc8a3d7445220ca5f11d\",\n                            \"name\": \"Allergy\",\n                            \"image\": \"c7492a81b781fbc21e5c56881e7612a2\"\n                        }\n                    ],\n                    \"__v\": 0\n                },\n                \"subcategory\": \"60a5bc783d7445220ca5f11c\",\n                \"__v\": 0,\n                \"itemSubCategory\": {\n                    \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                    \"_id\": \"60a5bc783d7445220ca5f11c\",\n                    \"name\": \"Cough, Cold & Flue\",\n                    \"image\": \"4cfed0d069fd3afaa88a89fd3c099d94\"\n                }\n            },\n            {\n                \"images\": [\n                    \"http://dummyimage.com/386x297.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/293x233.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/368x394.png/dddddd/000000\"\n                ],\n                \"createdDate\": \"2021-05-20T11:49:03.841Z\",\n                \"enabled\": true,\n                \"sold\": 1555,\n                \"views\": 2200,\n                \"_id\": \"60a64d4f00498a060d6a06b3\",\n                \"title\": \"TOURCIA NUTRI EYE\",\n                \"brand\": {\n                    \"createdDate\": \"2021-05-19T12:18:58.691Z\",\n                    \"enabled\": true,\n                    \"_id\": \"60a523ef3699333298d15bee\",\n                    \"name\": \"Johnson & Johnson\",\n                    \"image\": \"9932b27ca60369c90af7376b4e8aa792\",\n                    \"__v\": 0\n                },\n                \"description\": \"in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis\",\n                \"howToUse\": \"donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend\",\n                \"stock\": 8752,\n                \"fakeCost\": 2869,\n                \"actualCost\": 2332,\n                \"form\": \"felis fusce\",\n                \"productType\": \"amet sapien\",\n                \"size\": \"2XL\",\n                \"category\": {\n                    \"createdDate\": \"2021-05-19T15:08:47.043Z\",\n                    \"_id\": \"60a5b82bc63e197a3a057072\",\n                    \"name\": \"Medications\",\n                    \"image\": \"437e1745d0fbeb827ef7df28c4b7f986\",\n                    \"subcategories\": [\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc593d7445220ca5f11b\",\n                            \"name\": \"Pain Relief\",\n                            \"image\": \"7fadae79745a72438574b033c29e0113\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc783d7445220ca5f11c\",\n                            \"name\": \"Cough, Cold & Flue\",\n                            \"image\": \"4cfed0d069fd3afaa88a89fd3c099d94\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc8a3d7445220ca5f11d\",\n                            \"name\": \"Allergy\",\n                            \"image\": \"c7492a81b781fbc21e5c56881e7612a2\"\n                        }\n                    ],\n                    \"__v\": 0\n                },\n                \"subcategory\": \"60a5bc8a3d7445220ca5f11d\",\n                \"__v\": 0,\n                \"itemSubCategory\": {\n                    \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                    \"_id\": \"60a5bc8a3d7445220ca5f11d\",\n                    \"name\": \"Allergy\",\n                    \"image\": \"c7492a81b781fbc21e5c56881e7612a2\"\n                }\n            },\n            {\n                \"images\": [\n                    \"http://dummyimage.com/386x297.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/293x233.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/368x394.png/dddddd/000000\"\n                ],\n                \"createdDate\": \"2021-05-20T11:49:03.841Z\",\n                \"enabled\": true,\n                \"sold\": 3544,\n                \"views\": 3277,\n                \"_id\": \"60a64d4f00498a060d6a06b2\",\n                \"title\": \"Acyclovir\",\n                \"brand\": {\n                    \"createdDate\": \"2021-05-19T12:18:58.691Z\",\n                    \"enabled\": true,\n                    \"_id\": \"60a524083699333298d15bf0\",\n                    \"name\": \"Pfizer\",\n                    \"image\": \"0e21554e2d0b87560b7f43e95268233d\",\n                    \"__v\": 0\n                },\n                \"description\": \"nisi volutpat eleifend donec ut dolor morbi vel lectus in quam\",\n                \"howToUse\": \"eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla\",\n                \"stock\": 5533,\n                \"fakeCost\": 9843,\n                \"actualCost\": 4946,\n                \"form\": \"a libero\",\n                \"productType\": \"non lectus\",\n                \"size\": \"M\",\n                \"category\": {\n                    \"createdDate\": \"2021-05-19T15:08:47.043Z\",\n                    \"_id\": \"60a5b82bc63e197a3a057072\",\n                    \"name\": \"Medications\",\n                    \"image\": \"437e1745d0fbeb827ef7df28c4b7f986\",\n                    \"subcategories\": [\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc593d7445220ca5f11b\",\n                            \"name\": \"Pain Relief\",\n                            \"image\": \"7fadae79745a72438574b033c29e0113\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc783d7445220ca5f11c\",\n                            \"name\": \"Cough, Cold & Flue\",\n                            \"image\": \"4cfed0d069fd3afaa88a89fd3c099d94\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc8a3d7445220ca5f11d\",\n                            \"name\": \"Allergy\",\n                            \"image\": \"c7492a81b781fbc21e5c56881e7612a2\"\n                        }\n                    ],\n                    \"__v\": 0\n                },\n                \"subcategory\": \"60a5bc593d7445220ca5f11b\",\n                \"__v\": 0,\n                \"itemSubCategory\": {\n                    \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                    \"_id\": \"60a5bc593d7445220ca5f11b\",\n                    \"name\": \"Pain Relief\",\n                    \"image\": \"7fadae79745a72438574b033c29e0113\"\n                }\n            },\n            {\n                \"images\": [\n                    \"http://dummyimage.com/386x297.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/293x233.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/368x394.png/dddddd/000000\"\n                ],\n                \"createdDate\": \"2021-05-20T11:49:03.841Z\",\n                \"enabled\": true,\n                \"sold\": 1402,\n                \"views\": 823,\n                \"_id\": \"60a64d4f00498a060d6a06b4\",\n                \"title\": \"Rabeprazole Sodium\",\n                \"brand\": {\n                    \"createdDate\": \"2021-05-19T12:18:58.691Z\",\n                    \"enabled\": true,\n                    \"_id\": \"60a523d93699333298d15bed\",\n                    \"name\": \"AstraZeneca\",\n                    \"image\": \"9eddf2548802bc5c7ca45b1967745c7b\",\n                    \"__v\": 0\n                },\n                \"description\": \"purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient\",\n                \"howToUse\": \"auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras\",\n                \"stock\": 4456,\n                \"fakeCost\": 8528,\n                \"actualCost\": 8365,\n                \"form\": \"justo\",\n                \"productType\": \"neque\",\n                \"size\": \"M\",\n                \"category\": {\n                    \"createdDate\": \"2021-05-19T15:08:47.043Z\",\n                    \"_id\": \"60a5b82bc63e197a3a057072\",\n                    \"name\": \"Medications\",\n                    \"image\": \"437e1745d0fbeb827ef7df28c4b7f986\",\n                    \"subcategories\": [\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc593d7445220ca5f11b\",\n                            \"name\": \"Pain Relief\",\n                            \"image\": \"7fadae79745a72438574b033c29e0113\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc783d7445220ca5f11c\",\n                            \"name\": \"Cough, Cold & Flue\",\n                            \"image\": \"4cfed0d069fd3afaa88a89fd3c099d94\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc8a3d7445220ca5f11d\",\n                            \"name\": \"Allergy\",\n                            \"image\": \"c7492a81b781fbc21e5c56881e7612a2\"\n                        }\n                    ],\n                    \"__v\": 0\n                },\n                \"subcategory\": \"60a5bc8a3d7445220ca5f11d\",\n                \"__v\": 0,\n                \"itemSubCategory\": {\n                    \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                    \"_id\": \"60a5bc8a3d7445220ca5f11d\",\n                    \"name\": \"Allergy\",\n                    \"image\": \"c7492a81b781fbc21e5c56881e7612a2\"\n                }\n            },\n            {\n                \"images\": [\n                    \"http://dummyimage.com/386x297.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/293x233.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/368x394.png/dddddd/000000\"\n                ],\n                \"createdDate\": \"2021-05-20T11:49:03.841Z\",\n                \"enabled\": true,\n                \"sold\": 552,\n                \"views\": 3019,\n                \"_id\": \"60a64d4f00498a060d6a06b5\",\n                \"title\": \"Flanax Antacid\",\n                \"brand\": {\n                    \"createdDate\": \"2021-05-19T12:18:58.691Z\",\n                    \"enabled\": true,\n                    \"_id\": \"60a523d93699333298d15bed\",\n                    \"name\": \"AstraZeneca\",\n                    \"image\": \"9eddf2548802bc5c7ca45b1967745c7b\",\n                    \"__v\": 0\n                },\n                \"description\": \"porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus\",\n                \"howToUse\": \"integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas\",\n                \"stock\": 8157,\n                \"fakeCost\": 7989,\n                \"actualCost\": 2618,\n                \"form\": \"blandit\",\n                \"productType\": \"semper sapien\",\n                \"size\": \"M\",\n                \"category\": {\n                    \"createdDate\": \"2021-05-19T15:08:47.043Z\",\n                    \"_id\": \"60a5b852c63e197a3a057074\",\n                    \"name\": \"Beauty\",\n                    \"image\": \"ca1e2e24ea1e22b57ae9052d2447f990\",\n                    \"subcategories\": [\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bcc43d7445220ca5f11e\",\n                            \"name\": \"Face Washes\",\n                            \"image\": \"61db21d3587d96f3ee107b650e88ab15\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bcd43d7445220ca5f11f\",\n                            \"name\": \"Hair Care\",\n                            \"image\": \"89fb77583bd370281cabee6c85f351de\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bcee3d7445220ca5f120\",\n                            \"name\": \"Bath and body\",\n                            \"image\": \"5566c35ba4ae4d1f190c52df448c3abe\"\n                        }\n                    ],\n                    \"__v\": 0\n                },\n                \"subcategory\": \"60a5bcd43d7445220ca5f11f\",\n                \"__v\": 0,\n                \"itemSubCategory\": {\n                    \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                    \"_id\": \"60a5bcd43d7445220ca5f11f\",\n                    \"name\": \"Hair Care\",\n                    \"image\": \"89fb77583bd370281cabee6c85f351de\"\n                }\n            },\n            {\n                \"images\": [\n                    \"http://dummyimage.com/386x297.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/293x233.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/368x394.png/dddddd/000000\"\n                ],\n                \"createdDate\": \"2021-05-20T11:49:03.841Z\",\n                \"enabled\": true,\n                \"sold\": 1136,\n                \"views\": 1634,\n                \"_id\": \"60a64d4f00498a060d6a06b6\",\n                \"title\": \"Sumatriptan Succinate\",\n                \"brand\": {\n                    \"createdDate\": \"2021-05-19T12:18:58.691Z\",\n                    \"enabled\": true,\n                    \"_id\": \"60a523f83699333298d15bef\",\n                    \"name\": \"GSK\",\n                    \"image\": \"4e44d82fb2fdd6e484657a2f8203ad9c\",\n                    \"__v\": 0\n                },\n                \"description\": \"pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in\",\n                \"howToUse\": \"maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio\",\n                \"stock\": 9169,\n                \"fakeCost\": 9210,\n                \"actualCost\": 5094,\n                \"form\": \"rhoncus\",\n                \"productType\": \"ultrices enim\",\n                \"size\": \"S\",\n                \"category\": {\n                    \"createdDate\": \"2021-05-19T15:08:47.043Z\",\n                    \"_id\": \"60a5b82bc63e197a3a057072\",\n                    \"name\": \"Medications\",\n                    \"image\": \"437e1745d0fbeb827ef7df28c4b7f986\",\n                    \"subcategories\": [\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc593d7445220ca5f11b\",\n                            \"name\": \"Pain Relief\",\n                            \"image\": \"7fadae79745a72438574b033c29e0113\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc783d7445220ca5f11c\",\n                            \"name\": \"Cough, Cold & Flue\",\n                            \"image\": \"4cfed0d069fd3afaa88a89fd3c099d94\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc8a3d7445220ca5f11d\",\n                            \"name\": \"Allergy\",\n                            \"image\": \"c7492a81b781fbc21e5c56881e7612a2\"\n                        }\n                    ],\n                    \"__v\": 0\n                },\n                \"subcategory\": \"60a5bc8a3d7445220ca5f11d\",\n                \"__v\": 0,\n                \"itemSubCategory\": {\n                    \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                    \"_id\": \"60a5bc8a3d7445220ca5f11d\",\n                    \"name\": \"Allergy\",\n                    \"image\": \"c7492a81b781fbc21e5c56881e7612a2\"\n                }\n            },\n            {\n                \"images\": [\n                    \"http://dummyimage.com/386x297.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/293x233.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/368x394.png/dddddd/000000\"\n                ],\n                \"createdDate\": \"2021-05-20T11:49:03.841Z\",\n                \"enabled\": true,\n                \"sold\": 553,\n                \"views\": 3234,\n                \"_id\": \"60a64d4f00498a060d6a06b7\",\n                \"title\": \"Gabapentin\",\n                \"brand\": {\n                    \"createdDate\": \"2021-05-19T12:18:58.691Z\",\n                    \"enabled\": true,\n                    \"_id\": \"60a523f83699333298d15bef\",\n                    \"name\": \"GSK\",\n                    \"image\": \"4e44d82fb2fdd6e484657a2f8203ad9c\",\n                    \"__v\": 0\n                },\n                \"description\": \"tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo\",\n                \"howToUse\": \"cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in\",\n                \"stock\": 7664,\n                \"fakeCost\": 2301,\n                \"actualCost\": 1898,\n                \"form\": \"eleifend luctus\",\n                \"productType\": \"magnis dis\",\n                \"size\": \"M\",\n                \"category\": {\n                    \"createdDate\": \"2021-05-19T15:08:47.043Z\",\n                    \"_id\": \"60a5b82bc63e197a3a057072\",\n                    \"name\": \"Medications\",\n                    \"image\": \"437e1745d0fbeb827ef7df28c4b7f986\",\n                    \"subcategories\": [\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc593d7445220ca5f11b\",\n                            \"name\": \"Pain Relief\",\n                            \"image\": \"7fadae79745a72438574b033c29e0113\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc783d7445220ca5f11c\",\n                            \"name\": \"Cough, Cold & Flue\",\n                            \"image\": \"4cfed0d069fd3afaa88a89fd3c099d94\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc8a3d7445220ca5f11d\",\n                            \"name\": \"Allergy\",\n                            \"image\": \"c7492a81b781fbc21e5c56881e7612a2\"\n                        }\n                    ],\n                    \"__v\": 0\n                },\n                \"subcategory\": \"60a5bc783d7445220ca5f11c\",\n                \"__v\": 0,\n                \"itemSubCategory\": {\n                    \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                    \"_id\": \"60a5bc783d7445220ca5f11c\",\n                    \"name\": \"Cough, Cold & Flue\",\n                    \"image\": \"4cfed0d069fd3afaa88a89fd3c099d94\"\n                }\n            },\n            {\n                \"images\": [\n                    \"http://dummyimage.com/386x297.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/293x233.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/368x394.png/dddddd/000000\"\n                ],\n                \"createdDate\": \"2021-05-20T11:49:03.841Z\",\n                \"enabled\": true,\n                \"sold\": 4527,\n                \"views\": 3010,\n                \"_id\": \"60a64d4f00498a060d6a06b9\",\n                \"title\": \"Laxative\",\n                \"brand\": {\n                    \"createdDate\": \"2021-05-19T12:18:58.691Z\",\n                    \"enabled\": true,\n                    \"_id\": \"60a523d93699333298d15bed\",\n                    \"name\": \"AstraZeneca\",\n                    \"image\": \"9eddf2548802bc5c7ca45b1967745c7b\",\n                    \"__v\": 0\n                },\n                \"description\": \"nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis\",\n                \"howToUse\": \"in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing\",\n                \"stock\": 5743,\n                \"fakeCost\": 6568,\n                \"actualCost\": 8161,\n                \"form\": \"ultrices posuere\",\n                \"productType\": \"at\",\n                \"size\": \"S\",\n                \"category\": {\n                    \"createdDate\": \"2021-05-19T15:08:47.043Z\",\n                    \"_id\": \"60a5b82bc63e197a3a057072\",\n                    \"name\": \"Medications\",\n                    \"image\": \"437e1745d0fbeb827ef7df28c4b7f986\",\n                    \"subcategories\": [\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc593d7445220ca5f11b\",\n                            \"name\": \"Pain Relief\",\n                            \"image\": \"7fadae79745a72438574b033c29e0113\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc783d7445220ca5f11c\",\n                            \"name\": \"Cough, Cold & Flue\",\n                            \"image\": \"4cfed0d069fd3afaa88a89fd3c099d94\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc8a3d7445220ca5f11d\",\n                            \"name\": \"Allergy\",\n                            \"image\": \"c7492a81b781fbc21e5c56881e7612a2\"\n                        }\n                    ],\n                    \"__v\": 0\n                },\n                \"subcategory\": \"60a5bc593d7445220ca5f11b\",\n                \"__v\": 0,\n                \"itemSubCategory\": {\n                    \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                    \"_id\": \"60a5bc593d7445220ca5f11b\",\n                    \"name\": \"Pain Relief\",\n                    \"image\": \"7fadae79745a72438574b033c29e0113\"\n                }\n            },\n            {\n                \"images\": [\n                    \"http://dummyimage.com/386x297.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/293x233.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/368x394.png/dddddd/000000\"\n                ],\n                \"createdDate\": \"2021-05-20T11:49:03.841Z\",\n                \"enabled\": true,\n                \"sold\": 1930,\n                \"views\": 4586,\n                \"_id\": \"60a64d4f00498a060d6a06b8\",\n                \"title\": \"Methotrexate Sodium\",\n                \"brand\": {\n                    \"createdDate\": \"2021-05-19T12:18:58.691Z\",\n                    \"enabled\": true,\n                    \"_id\": \"60a523873699333298d15bec\",\n                    \"name\": \"Abbott\",\n                    \"image\": \"2134be3999443ce451ee12cb3c2bca51\",\n                    \"__v\": 0\n                },\n                \"description\": \"risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum\",\n                \"howToUse\": \"ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit\",\n                \"stock\": 5605,\n                \"fakeCost\": 3413,\n                \"actualCost\": 4630,\n                \"form\": \"enim lorem\",\n                \"productType\": \"curabitur convallis\",\n                \"size\": \"S\",\n                \"category\": {\n                    \"createdDate\": \"2021-05-19T15:08:47.043Z\",\n                    \"_id\": \"60a5b852c63e197a3a057074\",\n                    \"name\": \"Beauty\",\n                    \"image\": \"ca1e2e24ea1e22b57ae9052d2447f990\",\n                    \"subcategories\": [\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bcc43d7445220ca5f11e\",\n                            \"name\": \"Face Washes\",\n                            \"image\": \"61db21d3587d96f3ee107b650e88ab15\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bcd43d7445220ca5f11f\",\n                            \"name\": \"Hair Care\",\n                            \"image\": \"89fb77583bd370281cabee6c85f351de\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bcee3d7445220ca5f120\",\n                            \"name\": \"Bath and body\",\n                            \"image\": \"5566c35ba4ae4d1f190c52df448c3abe\"\n                        }\n                    ],\n                    \"__v\": 0\n                },\n                \"subcategory\": \"60a5bcd43d7445220ca5f11f\",\n                \"__v\": 0,\n                \"itemSubCategory\": {\n                    \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                    \"_id\": \"60a5bcd43d7445220ca5f11f\",\n                    \"name\": \"Hair Care\",\n                    \"image\": \"89fb77583bd370281cabee6c85f351de\"\n                }\n            },\n            {\n                \"images\": [\n                    \"http://dummyimage.com/386x297.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/293x233.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/368x394.png/dddddd/000000\"\n                ],\n                \"createdDate\": \"2021-05-20T11:49:03.841Z\",\n                \"enabled\": true,\n                \"sold\": 4911,\n                \"views\": 255,\n                \"_id\": \"60a64d4f00498a060d6a06ba\",\n                \"title\": \"OxyContin\",\n                \"brand\": {\n                    \"createdDate\": \"2021-05-19T12:18:58.691Z\",\n                    \"enabled\": true,\n                    \"_id\": \"60a523d93699333298d15bed\",\n                    \"name\": \"AstraZeneca\",\n                    \"image\": \"9eddf2548802bc5c7ca45b1967745c7b\",\n                    \"__v\": 0\n                },\n                \"description\": \"at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat\",\n                \"howToUse\": \"felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus\",\n                \"stock\": 5174,\n                \"fakeCost\": 2319,\n                \"actualCost\": 1047,\n                \"form\": \"sit\",\n                \"productType\": \"nunc\",\n                \"size\": \"L\",\n                \"category\": {\n                    \"createdDate\": \"2021-05-19T15:08:47.043Z\",\n                    \"_id\": \"60a5b852c63e197a3a057074\",\n                    \"name\": \"Beauty\",\n                    \"image\": \"ca1e2e24ea1e22b57ae9052d2447f990\",\n                    \"subcategories\": [\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bcc43d7445220ca5f11e\",\n                            \"name\": \"Face Washes\",\n                            \"image\": \"61db21d3587d96f3ee107b650e88ab15\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bcd43d7445220ca5f11f\",\n                            \"name\": \"Hair Care\",\n                            \"image\": \"89fb77583bd370281cabee6c85f351de\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bcee3d7445220ca5f120\",\n                            \"name\": \"Bath and body\",\n                            \"image\": \"5566c35ba4ae4d1f190c52df448c3abe\"\n                        }\n                    ],\n                    \"__v\": 0\n                },\n                \"subcategory\": \"60a5bcee3d7445220ca5f120\",\n                \"__v\": 0,\n                \"itemSubCategory\": {\n                    \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                    \"_id\": \"60a5bcee3d7445220ca5f120\",\n                    \"name\": \"Bath and body\",\n                    \"image\": \"5566c35ba4ae4d1f190c52df448c3abe\"\n                }\n            },\n            {\n                \"images\": [\n                    \"http://dummyimage.com/386x297.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/293x233.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/368x394.png/dddddd/000000\"\n                ],\n                \"createdDate\": \"2021-05-20T11:49:03.841Z\",\n                \"enabled\": true,\n                \"sold\": 2021,\n                \"views\": 594,\n                \"_id\": \"60a64d4f00498a060d6a06bb\",\n                \"title\": \"Crestor\",\n                \"brand\": {\n                    \"createdDate\": \"2021-05-19T12:18:58.691Z\",\n                    \"enabled\": true,\n                    \"_id\": \"60a523873699333298d15bec\",\n                    \"name\": \"Abbott\",\n                    \"image\": \"2134be3999443ce451ee12cb3c2bca51\",\n                    \"__v\": 0\n                },\n                \"description\": \"justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat\",\n                \"howToUse\": \"luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui\",\n                \"stock\": 9949,\n                \"fakeCost\": 3956,\n                \"actualCost\": 9478,\n                \"form\": \"mauris\",\n                \"productType\": \"nisl duis\",\n                \"size\": \"L\",\n                \"category\": {\n                    \"createdDate\": \"2021-05-19T15:08:47.043Z\",\n                    \"_id\": \"60a5b82bc63e197a3a057072\",\n                    \"name\": \"Medications\",\n                    \"image\": \"437e1745d0fbeb827ef7df28c4b7f986\",\n                    \"subcategories\": [\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc593d7445220ca5f11b\",\n                            \"name\": \"Pain Relief\",\n                            \"image\": \"7fadae79745a72438574b033c29e0113\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc783d7445220ca5f11c\",\n                            \"name\": \"Cough, Cold & Flue\",\n                            \"image\": \"4cfed0d069fd3afaa88a89fd3c099d94\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bc8a3d7445220ca5f11d\",\n                            \"name\": \"Allergy\",\n                            \"image\": \"c7492a81b781fbc21e5c56881e7612a2\"\n                        }\n                    ],\n                    \"__v\": 0\n                },\n                \"subcategory\": \"60a5bc593d7445220ca5f11b\",\n                \"__v\": 0,\n                \"itemSubCategory\": {\n                    \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                    \"_id\": \"60a5bc593d7445220ca5f11b\",\n                    \"name\": \"Pain Relief\",\n                    \"image\": \"7fadae79745a72438574b033c29e0113\"\n                }\n            },\n            {\n                \"images\": [\n                    \"http://dummyimage.com/386x297.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/293x233.png/ff4444/ffffff\",\n                    \"http://dummyimage.com/368x394.png/dddddd/000000\"\n                ],\n                \"createdDate\": \"2021-05-20T11:49:03.841Z\",\n                \"enabled\": true,\n                \"sold\": 4813,\n                \"views\": 4985,\n                \"_id\": \"60a64d4f00498a060d6a06bc\",\n                \"title\": \"CLE DE PEAU BEAUTE FOUNDATION I\",\n                \"brand\": {\n                    \"createdDate\": \"2021-05-19T12:18:58.691Z\",\n                    \"enabled\": true,\n                    \"_id\": \"60a523f83699333298d15bef\",\n                    \"name\": \"GSK\",\n                    \"image\": \"4e44d82fb2fdd6e484657a2f8203ad9c\",\n                    \"__v\": 0\n                },\n                \"description\": \"vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in\",\n                \"howToUse\": \"erat quisque erat eros viverra eget congue eget semper rutrum nulla\",\n                \"stock\": 4991,\n                \"fakeCost\": 6299,\n                \"actualCost\": 5434,\n                \"form\": \"tincidunt\",\n                \"productType\": \"pellentesque\",\n                \"size\": \"XS\",\n                \"category\": {\n                    \"createdDate\": \"2021-05-19T15:08:47.043Z\",\n                    \"_id\": \"60a5b852c63e197a3a057074\",\n                    \"name\": \"Beauty\",\n                    \"image\": \"ca1e2e24ea1e22b57ae9052d2447f990\",\n                    \"subcategories\": [\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bcc43d7445220ca5f11e\",\n                            \"name\": \"Face Washes\",\n                            \"image\": \"61db21d3587d96f3ee107b650e88ab15\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bcd43d7445220ca5f11f\",\n                            \"name\": \"Hair Care\",\n                            \"image\": \"89fb77583bd370281cabee6c85f351de\"\n                        },\n                        {\n                            \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                            \"_id\": \"60a5bcee3d7445220ca5f120\",\n                            \"name\": \"Bath and body\",\n                            \"image\": \"5566c35ba4ae4d1f190c52df448c3abe\"\n                        }\n                    ],\n                    \"__v\": 0\n                },\n                \"subcategory\": \"60a5bcee3d7445220ca5f120\",\n                \"__v\": 0,\n                \"itemSubCategory\": {\n                    \"createdDate\": \"2021-05-20T01:31:52.190Z\",\n                    \"_id\": \"60a5bcee3d7445220ca5f120\",\n                    \"name\": \"Bath and body\",\n                    \"image\": \"5566c35ba4ae4d1f190c52df448c3abe\"\n                }\n            }\n        ],\n        \"current\": \"1\",\n        \"pages\": 25,\n        \"total\": 481\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Newly Added Products",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/newAddedProducts",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"newAddedProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Most Viewed Products",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{pharmashopURL}}/api/mostViewedProducts",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"mostViewedProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View single Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"60a64d4f00498a060d6a06bc\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/viewProduct",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"viewProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Best selling Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/bestSellingProducts",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"bestSellingProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"id\":\"60a64da100498a060d6a085a\",\n \"title\":\"Midazolam\"   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/updateProduct",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"updateProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Product Stock",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"id\":\"60a64da100498a060d6a085a\",\n \"newStock\":30   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/addProductStock",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"addProductStock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Disable Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"id\":\"60a64da100498a060d6a085a\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/disableProduct",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"disableProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enable Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"id\":\"60a64da100498a060d6a085a\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/enableProduct",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"enableProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Para\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/searchProducts",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"searchProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Products by Category and Subcategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n       \"subcategory\": \"60a5bcc43d7445220ca5f11e\",\n       \"category\":\"60a5b852c63e197a3a057074\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pharmashopURL}}/api/productsByCatAndSubcat",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"productsByCatAndSubcat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Products",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:5600/api/setProducts",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"api",
+								"setProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bulk Update links",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:5600/api/bulkUpdateLinks",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"api",
+								"bulkUpdateLinks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Products by brands",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"brand\":\"60a523873699333298d15bec\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5600/api/sfdhfiugeadhsiljxzk",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"api",
+								"sfdhfiugeadhsiljxzk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Bulk Products",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"products\": [\n        {\n            \"title\": \"lobortis\",\n            \"description\": \"Nulla ut erat id mauris vulputate elementum.\",\n            \"howToUse\": \"Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus.\",\n            \"brand\": \"6107eab2ff5a35052e38377c\",\n            \"stock\": 2287,\n            \"fakeCost\": 8398,\n            \"actualCost\": 987,\n            \"form\": \"Cream\",\n            \"productType\": \"Cream\",\n            \"size\": 463,\n            \"sold\": 814,\n            \"views\": 1458\n        },\n        {\n            \"title\": \"vehicula condimentum curabitur\",\n            \"description\": \"Suspendisse potenti. In eleifend quam a odio.\",\n            \"howToUse\": \"Vivamus tortor. Duis mattis egestas metus.\",\n            \"brand\": \"6107eab2ff5a35052e38377d\",\n            \"stock\": 648,\n            \"fakeCost\": 5435,\n            \"actualCost\": 3979,\n            \"form\": \"Cream\",\n            \"productType\": \"Cream\",\n            \"size\": 291,\n            \"sold\": 1349,\n            \"views\": 6523\n        },\n        {\n            \"title\": \"nibh\",\n            \"description\": \"Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.\",\n            \"howToUse\": \"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue.\",\n            \"brand\": \"6107eab2ff5a35052e383783\",\n            \"stock\": 6534,\n            \"fakeCost\": 4416,\n            \"actualCost\": 1664,\n            \"form\": \"Syrup\",\n            \"productType\": \"Cream\",\n            \"size\": 124,\n            \"sold\": 2749,\n            \"views\": 2589\n        },\n        {\n            \"title\": \"consequat in\",\n            \"description\": \"Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst.\",\n            \"howToUse\": \"Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\",\n            \"brand\": \"6107eab2ff5a35052e383781\",\n            \"stock\": 6965,\n            \"fakeCost\": 1446,\n            \"actualCost\": 3577,\n            \"form\": \"Cream\",\n            \"productType\": \"Cream\",\n            \"size\": 310,\n            \"sold\": 4012,\n            \"views\": 6197\n        },\n        {\n            \"title\": \"odio justo\",\n            \"description\": \"In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.\",\n            \"howToUse\": \"Curabitur gravida nisi at nibh.\",\n            \"brand\": \"6107eab2ff5a35052e383780\",\n            \"stock\": 6473,\n            \"fakeCost\": 9988,\n            \"actualCost\": 1811,\n            \"form\": \"Powder\",\n            \"productType\": \"Tablet\",\n            \"size\": 442,\n            \"sold\": 790,\n            \"views\": 2715\n        },\n        {\n            \"title\": \"penatibus\",\n            \"description\": \"Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo. Aliquam quis turpis eget elit sodales scelerisque.\",\n            \"howToUse\": \"Quisque ut erat. Curabitur gravida nisi at nibh.\",\n            \"brand\": \"6107eab2ff5a35052e383782\",\n            \"stock\": 3664,\n            \"fakeCost\": 2103,\n            \"actualCost\": 8017,\n            \"form\": \"Cream\",\n            \"productType\": \"Tablet\",\n            \"size\": 352,\n            \"sold\": 3703,\n            \"views\": 7639\n        },\n        {\n            \"title\": \"ac\",\n            \"description\": \"Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus.\",\n            \"howToUse\": \"Maecenas tincidunt lacus at velit.\",\n            \"brand\": \"6107eab2ff5a35052e38377e\",\n            \"stock\": 8455,\n            \"fakeCost\": 5490,\n            \"actualCost\": 7226,\n            \"form\": \"Cream\",\n            \"productType\": \"Tablet\",\n            \"size\": 433,\n            \"sold\": 1055,\n            \"views\": 1948\n        },\n        {\n            \"title\": \"aliquam augue\",\n            \"description\": \"Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti.\",\n            \"howToUse\": \"Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit.\",\n            \"brand\": \"6107eab2ff5a35052e38377f\",\n            \"stock\": 9948,\n            \"fakeCost\": 9922,\n            \"actualCost\": 8765,\n            \"form\": \"Powder\",\n            \"productType\": \"Powder\",\n            \"size\": 475,\n            \"sold\": 4603,\n            \"views\": 4881\n        },\n        {\n            \"title\": \"mi integer\",\n            \"description\": \"Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\",\n            \"howToUse\": \"Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti. In eleifend quam a odio.\",\n            \"brand\": \"6107eab2ff5a35052e38377c\",\n            \"stock\": 7991,\n            \"fakeCost\": 1845,\n            \"actualCost\": 7645,\n            \"form\": \"Liquid\",\n            \"productType\": \"Syrup\",\n            \"size\": 195,\n            \"sold\": 4744,\n            \"views\": 2793\n        },\n        {\n            \"title\": \"rhoncus aliquet\",\n            \"description\": \"Proin leo odio, porttitor id, consequat in, consequat ut, nulla.\",\n            \"howToUse\": \"Proin at turpis a pede posuere nonummy.\",\n            \"brand\": \"6107eab2ff5a35052e38377d\",\n            \"stock\": 2642,\n            \"fakeCost\": 8014,\n            \"actualCost\": 4187,\n            \"form\": \"Tablet\",\n            \"productType\": \"Cream\",\n            \"size\": 266,\n            \"sold\": 572,\n            \"views\": 6178\n        },\n        {\n            \"title\": \"adipiscing molestie\",\n            \"description\": \"Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat.\",\n            \"howToUse\": \"Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\",\n            \"brand\": \"6107eab2ff5a35052e383783\",\n            \"stock\": 9019,\n            \"fakeCost\": 1200,\n            \"actualCost\": 6667,\n            \"form\": \"Syrup\",\n            \"productType\": \"Powder\",\n            \"size\": 481,\n            \"sold\": 901,\n            \"views\": 6452\n        },\n        {\n            \"title\": \"morbi\",\n            \"description\": \"Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit.\",\n            \"howToUse\": \"Duis ac nibh.\",\n            \"brand\": \"6107eab2ff5a35052e383781\",\n            \"stock\": 7359,\n            \"fakeCost\": 6832,\n            \"actualCost\": 7543,\n            \"form\": \"Tablet\",\n            \"productType\": \"Powder\",\n            \"size\": 409,\n            \"sold\": 1252,\n            \"views\": 6859\n        },\n        {\n            \"title\": \"venenatis tristique\",\n            \"description\": \"Nulla tempus. Vivamus in felis eu sapien cursus vestibulum. Proin eu mi.\",\n            \"howToUse\": \"Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est.\",\n            \"brand\": \"6107eab2ff5a35052e383780\",\n            \"stock\": 2306,\n            \"fakeCost\": 3179,\n            \"actualCost\": 3975,\n            \"form\": \"Cream\",\n            \"productType\": \"Syrup\",\n            \"size\": 40,\n            \"sold\": 2447,\n            \"views\": 510\n        },\n        {\n            \"title\": \"turpis sed\",\n            \"description\": \"Nulla mollis molestie lorem.\",\n            \"howToUse\": \"Aenean fermentum.\",\n            \"brand\": \"6107eab2ff5a35052e383782\",\n            \"stock\": 8511,\n            \"fakeCost\": 3734,\n            \"actualCost\": 3343,\n            \"form\": \"Liquid\",\n            \"productType\": \"Tablet\",\n            \"size\": 290,\n            \"sold\": 2774,\n            \"views\": 2767\n        },\n        {\n            \"title\": \"est et tempus\",\n            \"description\": \"Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat.\",\n            \"howToUse\": \"Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat.\",\n            \"brand\": \"6107eab2ff5a35052e38377e\",\n            \"stock\": 2428,\n            \"fakeCost\": 3586,\n            \"actualCost\": 8059,\n            \"form\": \"Cream\",\n            \"productType\": \"Cream\",\n            \"size\": 432,\n            \"sold\": 1729,\n            \"views\": 1915\n        },\n        {\n            \"title\": \"ante ipsum primis\",\n            \"description\": \"Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus.\",\n            \"howToUse\": \"Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula.\",\n            \"brand\": \"6107eab2ff5a35052e38377f\",\n            \"stock\": 9650,\n            \"fakeCost\": 9330,\n            \"actualCost\": 2383,\n            \"form\": \"Tablet\",\n            \"productType\": \"Syrup\",\n            \"size\": 37,\n            \"sold\": 1331,\n            \"views\": 486\n        },\n        {\n            \"title\": \"sed tincidunt\",\n            \"description\": \"Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla.\",\n            \"howToUse\": \"In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy.\",\n            \"brand\": \"6107eab2ff5a35052e38377c\",\n            \"stock\": 7251,\n            \"fakeCost\": 6795,\n            \"actualCost\": 1749,\n            \"form\": \"Liquid\",\n            \"productType\": \"Cream\",\n            \"size\": 157,\n            \"sold\": 564,\n            \"views\": 6764\n        },\n        {\n            \"title\": \"malesuada\",\n            \"description\": \"Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\",\n            \"howToUse\": \"Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.\",\n            \"brand\": \"6107eab2ff5a35052e38377d\",\n            \"stock\": 876,\n            \"fakeCost\": 5684,\n            \"actualCost\": 1475,\n            \"form\": \"Powder\",\n            \"productType\": \"Liquid\",\n            \"size\": 412,\n            \"sold\": 1775,\n            \"views\": 4021\n        },\n        {\n            \"title\": \"sapien urna pretium\",\n            \"description\": \"Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti.\",\n            \"howToUse\": \"In quis justo.\",\n            \"brand\": \"6107eab2ff5a35052e383783\",\n            \"stock\": 3579,\n            \"fakeCost\": 7881,\n            \"actualCost\": 1066,\n            \"form\": \"Syrup\",\n            \"productType\": \"Syrup\",\n            \"size\": 202,\n            \"sold\": 1788,\n            \"views\": 2142\n        },\n        {\n            \"title\": \"ut tellus\",\n            \"description\": \"Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst.\",\n            \"howToUse\": \"Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo.\",\n            \"brand\": \"6107eab2ff5a35052e383781\",\n            \"stock\": 2277,\n            \"fakeCost\": 8121,\n            \"actualCost\": 8560,\n            \"form\": \"Liquid\",\n            \"productType\": \"Cream\",\n            \"size\": 254,\n            \"sold\": 2638,\n            \"views\": 2879\n        },\n        {\n            \"title\": \"odio curabitur\",\n            \"description\": \"In congue.\",\n            \"howToUse\": \"In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\",\n            \"brand\": \"6107eab2ff5a35052e383780\",\n            \"stock\": 5614,\n            \"fakeCost\": 4865,\n            \"actualCost\": 1906,\n            \"form\": \"Tablet\",\n            \"productType\": \"Liquid\",\n            \"size\": 179,\n            \"sold\": 3109,\n            \"views\": 6948\n        },\n        {\n            \"title\": \"natoque\",\n            \"description\": \"Morbi a ipsum.\",\n            \"howToUse\": \"Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\",\n            \"brand\": \"6107eab2ff5a35052e383782\",\n            \"stock\": 1255,\n            \"fakeCost\": 90,\n            \"actualCost\": 6717,\n            \"form\": \"Tablet\",\n            \"productType\": \"Tablet\",\n            \"size\": 33,\n            \"sold\": 4110,\n            \"views\": 4052\n        },\n        {\n            \"title\": \"varius ut blandit\",\n            \"description\": \"Maecenas pulvinar lobortis est.\",\n            \"howToUse\": \"Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo.\",\n            \"brand\": \"6107eab2ff5a35052e38377e\",\n            \"stock\": 6099,\n            \"fakeCost\": 8035,\n            \"actualCost\": 6266,\n            \"form\": \"Syrup\",\n            \"productType\": \"Syrup\",\n            \"size\": 241,\n            \"sold\": 1633,\n            \"views\": 3075\n        },\n        {\n            \"title\": \"luctus et\",\n            \"description\": \"Mauris sit amet eros.\",\n            \"howToUse\": \"Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum.\",\n            \"brand\": \"6107eab2ff5a35052e38377f\",\n            \"stock\": 2581,\n            \"fakeCost\": 9358,\n            \"actualCost\": 5678,\n            \"form\": \"Powder\",\n            \"productType\": \"Syrup\",\n            \"size\": 180,\n            \"sold\": 4924,\n            \"views\": 1768\n        },\n        {\n            \"title\": \"velit id pretium\",\n            \"description\": \"Vivamus tortor. Duis mattis egestas metus. Aenean fermentum.\",\n            \"howToUse\": \"In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\",\n            \"brand\": \"6107eab2ff5a35052e38377c\",\n            \"stock\": 3464,\n            \"fakeCost\": 148,\n            \"actualCost\": 7502,\n            \"form\": \"Powder\",\n            \"productType\": \"Powder\",\n            \"size\": 211,\n            \"sold\": 1948,\n            \"views\": 3699\n        },\n        {\n            \"title\": \"accumsan odio curabitur\",\n            \"description\": \"Donec dapibus. Duis at velit eu est congue elementum.\",\n            \"howToUse\": \"Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus.\",\n            \"brand\": \"6107eab2ff5a35052e38377d\",\n            \"stock\": 1710,\n            \"fakeCost\": 4903,\n            \"actualCost\": 2794,\n            \"form\": \"Syrup\",\n            \"productType\": \"Syrup\",\n            \"size\": 290,\n            \"sold\": 1428,\n            \"views\": 6940\n        },\n        {\n            \"title\": \"id lobortis\",\n            \"description\": \"Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio.\",\n            \"howToUse\": \"Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.\",\n            \"brand\": \"6107eab2ff5a35052e383783\",\n            \"stock\": 6615,\n            \"fakeCost\": 2155,\n            \"actualCost\": 3687,\n            \"form\": \"Cream\",\n            \"productType\": \"Syrup\",\n            \"size\": 52,\n            \"sold\": 4788,\n            \"views\": 3032\n        },\n        {\n            \"title\": \"vestibulum\",\n            \"description\": \"Proin at turpis a pede posuere nonummy. Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.\",\n            \"howToUse\": \"In sagittis dui vel nisl. Duis ac nibh.\",\n            \"brand\": \"6107eab2ff5a35052e383781\",\n            \"stock\": 4926,\n            \"fakeCost\": 9585,\n            \"actualCost\": 8890,\n            \"form\": \"Powder\",\n            \"productType\": \"Liquid\",\n            \"size\": 113,\n            \"sold\": 1227,\n            \"views\": 3555\n        },\n        {\n            \"title\": \"neque vestibulum\",\n            \"description\": \"Nullam varius. Nulla facilisi.\",\n            \"howToUse\": \"Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci.\",\n            \"brand\": \"6107eab2ff5a35052e383780\",\n            \"stock\": 6714,\n            \"fakeCost\": 4704,\n            \"actualCost\": 8163,\n            \"form\": \"Powder\",\n            \"productType\": \"Liquid\",\n            \"size\": 207,\n            \"sold\": 3118,\n            \"views\": 1337\n        },\n        {\n            \"title\": \"non velit nec\",\n            \"description\": \"Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\",\n            \"howToUse\": \"In est risus, auctor sed, tristique in, tempus sit amet, sem.\",\n            \"brand\": \"6107eab2ff5a35052e383782\",\n            \"stock\": 5225,\n            \"fakeCost\": 6130,\n            \"actualCost\": 2646,\n            \"form\": \"Tablet\",\n            \"productType\": \"Liquid\",\n            \"size\": 178,\n            \"sold\": 3562,\n            \"views\": 4836\n        },\n        {\n            \"title\": \"tortor\",\n            \"description\": \"Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend.\",\n            \"howToUse\": \"Nulla ac enim.\",\n            \"brand\": \"6107eab2ff5a35052e38377e\",\n            \"stock\": 3891,\n            \"fakeCost\": 8503,\n            \"actualCost\": 640,\n            \"form\": \"Cream\",\n            \"productType\": \"Cream\",\n            \"size\": 346,\n            \"sold\": 3013,\n            \"views\": 1551\n        },\n        {\n            \"title\": \"nisl\",\n            \"description\": \"Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc.\",\n            \"howToUse\": \"Donec dapibus. Duis at velit eu est congue elementum. In hac habitasse platea dictumst.\",\n            \"brand\": \"6107eab2ff5a35052e38377f\",\n            \"stock\": 1165,\n            \"fakeCost\": 9980,\n            \"actualCost\": 4593,\n            \"form\": \"Syrup\",\n            \"productType\": \"Tablet\",\n            \"size\": 494,\n            \"sold\": 396,\n            \"views\": 5785\n        },\n        {\n            \"title\": \"lobortis convallis tortor\",\n            \"description\": \"Fusce posuere felis sed lacus.\",\n            \"howToUse\": \"In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum.\",\n            \"brand\": \"6107eab2ff5a35052e38377c\",\n            \"stock\": 5220,\n            \"fakeCost\": 149,\n            \"actualCost\": 4859,\n            \"form\": \"Cream\",\n            \"productType\": \"Cream\",\n            \"size\": 52,\n            \"sold\": 2731,\n            \"views\": 6567\n        },\n        {\n            \"title\": \"ut massa volutpat\",\n            \"description\": \"Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci.\",\n            \"howToUse\": \"Morbi quis tortor id nulla ultrices aliquet.\",\n            \"brand\": \"6107eab2ff5a35052e38377d\",\n            \"stock\": 4545,\n            \"fakeCost\": 6305,\n            \"actualCost\": 2488,\n            \"form\": \"Syrup\",\n            \"productType\": \"Tablet\",\n            \"size\": 244,\n            \"sold\": 3826,\n            \"views\": 4023\n        },\n        {\n            \"title\": \"curae mauris viverra\",\n            \"description\": \"Nulla ut erat id mauris vulputate elementum. Nullam varius.\",\n            \"howToUse\": \"Maecenas tincidunt lacus at velit.\",\n            \"brand\": \"6107eab2ff5a35052e383783\",\n            \"stock\": 2837,\n            \"fakeCost\": 6126,\n            \"actualCost\": 749,\n            \"form\": \"Cream\",\n            \"productType\": \"Tablet\",\n            \"size\": 180,\n            \"sold\": 4265,\n            \"views\": 3210\n        },\n        {\n            \"title\": \"nibh fusce lacus\",\n            \"description\": \"Suspendisse accumsan tortor quis turpis. Sed ante.\",\n            \"howToUse\": \"Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros.\",\n            \"brand\": \"6107eab2ff5a35052e383781\",\n            \"stock\": 3535,\n            \"fakeCost\": 1375,\n            \"actualCost\": 4276,\n            \"form\": \"Liquid\",\n            \"productType\": \"Tablet\",\n            \"size\": 8,\n            \"sold\": 3125,\n            \"views\": 7290\n        },\n        {\n            \"title\": \"ante ipsum primis\",\n            \"description\": \"Aenean sit amet justo. Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.\",\n            \"howToUse\": \"Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat.\",\n            \"brand\": \"6107eab2ff5a35052e383780\",\n            \"stock\": 5111,\n            \"fakeCost\": 5579,\n            \"actualCost\": 2800,\n            \"form\": \"Syrup\",\n            \"productType\": \"Cream\",\n            \"size\": 493,\n            \"sold\": 4161,\n            \"views\": 1916\n        },\n        {\n            \"title\": \"penatibus et\",\n            \"description\": \"Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.\",\n            \"howToUse\": \"Phasellus in felis. Donec semper sapien a libero. Nam dui.\",\n            \"brand\": \"6107eab2ff5a35052e383782\",\n            \"stock\": 4501,\n            \"fakeCost\": 6512,\n            \"actualCost\": 4439,\n            \"form\": \"Tablet\",\n            \"productType\": \"Tablet\",\n            \"size\": 20,\n            \"sold\": 3905,\n            \"views\": 5217\n        },\n        {\n            \"title\": \"in felis eu\",\n            \"description\": \"Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\",\n            \"howToUse\": \"In hac habitasse platea dictumst.\",\n            \"brand\": \"6107eab2ff5a35052e38377e\",\n            \"stock\": 3979,\n            \"fakeCost\": 9898,\n            \"actualCost\": 8183,\n            \"form\": \"Powder\",\n            \"productType\": \"Syrup\",\n            \"size\": 99,\n            \"sold\": 553,\n            \"views\": 4044\n        },\n        {\n            \"title\": \"quis turpis eget\",\n            \"description\": \"Fusce consequat.\",\n            \"howToUse\": \"Nulla facilisi. Cras non velit nec nisi vulputate nonummy.\",\n            \"brand\": \"6107eab2ff5a35052e38377f\",\n            \"stock\": 6013,\n            \"fakeCost\": 5852,\n            \"actualCost\": 7786,\n            \"form\": \"Syrup\",\n            \"productType\": \"Syrup\",\n            \"size\": 38,\n            \"sold\": 2368,\n            \"views\": 4427\n        },\n        {\n            \"title\": \"eget orci vehicula\",\n            \"description\": \"Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.\",\n            \"howToUse\": \"Nulla ac enim.\",\n            \"brand\": \"6107eab2ff5a35052e38377c\",\n            \"stock\": 6115,\n            \"fakeCost\": 6822,\n            \"actualCost\": 6182,\n            \"form\": \"Syrup\",\n            \"productType\": \"Syrup\",\n            \"size\": 112,\n            \"sold\": 4438,\n            \"views\": 7333\n        },\n        {\n            \"title\": \"vestibulum ante\",\n            \"description\": \"Pellentesque ultrices mattis odio. Donec vitae nisi.\",\n            \"howToUse\": \"Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum.\",\n            \"brand\": \"6107eab2ff5a35052e38377d\",\n            \"stock\": 8817,\n            \"fakeCost\": 7961,\n            \"actualCost\": 3269,\n            \"form\": \"Tablet\",\n            \"productType\": \"Cream\",\n            \"size\": 377,\n            \"sold\": 650,\n            \"views\": 390\n        },\n        {\n            \"title\": \"ut erat curabitur\",\n            \"description\": \"Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\",\n            \"howToUse\": \"Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\",\n            \"brand\": \"6107eab2ff5a35052e383783\",\n            \"stock\": 4521,\n            \"fakeCost\": 6511,\n            \"actualCost\": 4441,\n            \"form\": \"Cream\",\n            \"productType\": \"Tablet\",\n            \"size\": 37,\n            \"sold\": 4656,\n            \"views\": 614\n        },\n        {\n            \"title\": \"sit\",\n            \"description\": \"Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\",\n            \"howToUse\": \"Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\",\n            \"brand\": \"6107eab2ff5a35052e383781\",\n            \"stock\": 4883,\n            \"fakeCost\": 5764,\n            \"actualCost\": 8486,\n            \"form\": \"Cream\",\n            \"productType\": \"Syrup\",\n            \"size\": 134,\n            \"sold\": 2340,\n            \"views\": 3629\n        },\n        {\n            \"title\": \"massa id nisl\",\n            \"description\": \"Vivamus in felis eu sapien cursus vestibulum.\",\n            \"howToUse\": \"Sed vel enim sit amet nunc viverra dapibus.\",\n            \"brand\": \"6107eab2ff5a35052e383780\",\n            \"stock\": 488,\n            \"fakeCost\": 2170,\n            \"actualCost\": 1311,\n            \"form\": \"Tablet\",\n            \"productType\": \"Powder\",\n            \"size\": 315,\n            \"sold\": 3405,\n            \"views\": 2772\n        },\n        {\n            \"title\": \"morbi sem mauris\",\n            \"description\": \"Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat.\",\n            \"howToUse\": \"Curabitur gravida nisi at nibh. In hac habitasse platea dictumst.\",\n            \"brand\": \"6107eab2ff5a35052e383782\",\n            \"stock\": 1819,\n            \"fakeCost\": 8746,\n            \"actualCost\": 4906,\n            \"form\": \"Cream\",\n            \"productType\": \"Cream\",\n            \"size\": 480,\n            \"sold\": 992,\n            \"views\": 3515\n        },\n        {\n            \"title\": \"eget\",\n            \"description\": \"Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl.\",\n            \"howToUse\": \"In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc.\",\n            \"brand\": \"6107eab2ff5a35052e38377e\",\n            \"stock\": 9431,\n            \"fakeCost\": 1143,\n            \"actualCost\": 4003,\n            \"form\": \"Liquid\",\n            \"productType\": \"Cream\",\n            \"size\": 249,\n            \"sold\": 1442,\n            \"views\": 3114\n        },\n        {\n            \"title\": \"fusce congue diam\",\n            \"description\": \"Praesent id massa id nisl venenatis lacinia.\",\n            \"howToUse\": \"Maecenas rhoncus aliquam lacus.\",\n            \"brand\": \"6107eab2ff5a35052e38377f\",\n            \"stock\": 4343,\n            \"fakeCost\": 1168,\n            \"actualCost\": 2298,\n            \"form\": \"Powder\",\n            \"productType\": \"Syrup\",\n            \"size\": 286,\n            \"sold\": 4452,\n            \"views\": 6435\n        },\n        {\n            \"title\": \"ligula in\",\n            \"description\": \"Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci.\",\n            \"howToUse\": \"Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\",\n            \"brand\": \"6107eab2ff5a35052e38377c\",\n            \"stock\": 4395,\n            \"fakeCost\": 9362,\n            \"actualCost\": 1337,\n            \"form\": \"Liquid\",\n            \"productType\": \"Powder\",\n            \"size\": 262,\n            \"sold\": 881,\n            \"views\": 6384\n        },\n        {\n            \"title\": \"sed\",\n            \"description\": \"Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti.\",\n            \"howToUse\": \"Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.\",\n            \"brand\": \"6107eab2ff5a35052e38377d\",\n            \"stock\": 6282,\n            \"fakeCost\": 8125,\n            \"actualCost\": 7762,\n            \"form\": \"Liquid\",\n            \"productType\": \"Cream\",\n            \"size\": 54,\n            \"sold\": 1954,\n            \"views\": 5475\n        },\n        {\n            \"title\": \"nulla nisl\",\n            \"description\": \"Donec posuere metus vitae ipsum. Aliquam non mauris.\",\n            \"howToUse\": \"Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante.\",\n            \"brand\": \"6107eab2ff5a35052e383783\",\n            \"stock\": 203,\n            \"fakeCost\": 8955,\n            \"actualCost\": 6006,\n            \"form\": \"Liquid\",\n            \"productType\": \"Liquid\",\n            \"size\": 326,\n            \"sold\": 966,\n            \"views\": 1773\n        },\n        {\n            \"title\": \"sollicitudin\",\n            \"description\": \"Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.\",\n            \"howToUse\": \"Donec dapibus.\",\n            \"brand\": \"6107eab2ff5a35052e383781\",\n            \"stock\": 8690,\n            \"fakeCost\": 5190,\n            \"actualCost\": 2383,\n            \"form\": \"Powder\",\n            \"productType\": \"Cream\",\n            \"size\": 70,\n            \"sold\": 3699,\n            \"views\": 4078\n        },\n        {\n            \"title\": \"non quam nec\",\n            \"description\": \"Quisque ut erat. Curabitur gravida nisi at nibh.\",\n            \"howToUse\": \"Integer ac neque. Duis bibendum. Morbi non quam nec dui luctus rutrum.\",\n            \"brand\": \"6107eab2ff5a35052e383780\",\n            \"stock\": 371,\n            \"fakeCost\": 9598,\n            \"actualCost\": 4783,\n            \"form\": \"Powder\",\n            \"productType\": \"Cream\",\n            \"size\": 148,\n            \"sold\": 4199,\n            \"views\": 5772\n        },\n        {\n            \"title\": \"ligula pellentesque ultrices\",\n            \"description\": \"Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh.\",\n            \"howToUse\": \"Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.\",\n            \"brand\": \"6107eab2ff5a35052e383782\",\n            \"stock\": 4574,\n            \"fakeCost\": 9601,\n            \"actualCost\": 3715,\n            \"form\": \"Syrup\",\n            \"productType\": \"Syrup\",\n            \"size\": 432,\n            \"sold\": 3696,\n            \"views\": 5720\n        },\n        {\n            \"title\": \"sapien arcu sed\",\n            \"description\": \"Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis.\",\n            \"howToUse\": \"Vivamus vel nulla eget eros elementum pellentesque.\",\n            \"brand\": \"6107eab2ff5a35052e38377e\",\n            \"stock\": 4895,\n            \"fakeCost\": 150,\n            \"actualCost\": 6745,\n            \"form\": \"Powder\",\n            \"productType\": \"Powder\",\n            \"size\": 248,\n            \"sold\": 3071,\n            \"views\": 1442\n        },\n        {\n            \"title\": \"proin\",\n            \"description\": \"Pellentesque at nulla.\",\n            \"howToUse\": \"Curabitur in libero ut massa volutpat convallis.\",\n            \"brand\": \"6107eab2ff5a35052e38377f\",\n            \"stock\": 2950,\n            \"fakeCost\": 4668,\n            \"actualCost\": 6533,\n            \"form\": \"Powder\",\n            \"productType\": \"Tablet\",\n            \"size\": 56,\n            \"sold\": 2356,\n            \"views\": 6510\n        },\n        {\n            \"title\": \"leo rhoncus\",\n            \"description\": \"Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis.\",\n            \"howToUse\": \"Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue.\",\n            \"brand\": \"6107eab2ff5a35052e38377c\",\n            \"stock\": 6575,\n            \"fakeCost\": 7588,\n            \"actualCost\": 6873,\n            \"form\": \"Tablet\",\n            \"productType\": \"Powder\",\n            \"size\": 428,\n            \"sold\": 332,\n            \"views\": 4219\n        },\n        {\n            \"title\": \"eu felis\",\n            \"description\": \"In hac habitasse platea dictumst.\",\n            \"howToUse\": \"Duis mattis egestas metus.\",\n            \"brand\": \"6107eab2ff5a35052e38377d\",\n            \"stock\": 4901,\n            \"fakeCost\": 811,\n            \"actualCost\": 405,\n            \"form\": \"Tablet\",\n            \"productType\": \"Syrup\",\n            \"size\": 108,\n            \"sold\": 782,\n            \"views\": 386\n        },\n        {\n            \"title\": \"pulvinar nulla pede\",\n            \"description\": \"Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\",\n            \"howToUse\": \"Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis.\",\n            \"brand\": \"6107eab2ff5a35052e383783\",\n            \"stock\": 1355,\n            \"fakeCost\": 601,\n            \"actualCost\": 6684,\n            \"form\": \"Powder\",\n            \"productType\": \"Syrup\",\n            \"size\": 478,\n            \"sold\": 1613,\n            \"views\": 7055\n        },\n        {\n            \"title\": \"vitae\",\n            \"description\": \"In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy.\",\n            \"howToUse\": \"Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\",\n            \"brand\": \"6107eab2ff5a35052e383781\",\n            \"stock\": 1836,\n            \"fakeCost\": 1589,\n            \"actualCost\": 3587,\n            \"form\": \"Powder\",\n            \"productType\": \"Tablet\",\n            \"size\": 119,\n            \"sold\": 2776,\n            \"views\": 5025\n        },\n        {\n            \"title\": \"quam a\",\n            \"description\": \"Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus.\",\n            \"howToUse\": \"Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.\",\n            \"brand\": \"6107eab2ff5a35052e383780\",\n            \"stock\": 7048,\n            \"fakeCost\": 8155,\n            \"actualCost\": 4375,\n            \"form\": \"Tablet\",\n            \"productType\": \"Syrup\",\n            \"size\": 349,\n            \"sold\": 2814,\n            \"views\": 4076\n        },\n        {\n            \"title\": \"volutpat eleifend\",\n            \"description\": \"Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio.\",\n            \"howToUse\": \"Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus.\",\n            \"brand\": \"6107eab2ff5a35052e383782\",\n            \"stock\": 6839,\n            \"fakeCost\": 2948,\n            \"actualCost\": 1152,\n            \"form\": \"Powder\",\n            \"productType\": \"Syrup\",\n            \"size\": 137,\n            \"sold\": 419,\n            \"views\": 4625\n        },\n        {\n            \"title\": \"sem\",\n            \"description\": \"Nulla nisl.\",\n            \"howToUse\": \"Proin risus. Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.\",\n            \"brand\": \"6107eab2ff5a35052e38377e\",\n            \"stock\": 1061,\n            \"fakeCost\": 4419,\n            \"actualCost\": 7453,\n            \"form\": \"Cream\",\n            \"productType\": \"Syrup\",\n            \"size\": 444,\n            \"sold\": 482,\n            \"views\": 1606\n        },\n        {\n            \"title\": \"sit\",\n            \"description\": \"Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend.\",\n            \"howToUse\": \"Maecenas ut massa quis augue luctus tincidunt.\",\n            \"brand\": \"6107eab2ff5a35052e38377f\",\n            \"stock\": 5107,\n            \"fakeCost\": 3441,\n            \"actualCost\": 292,\n            \"form\": \"Cream\",\n            \"productType\": \"Syrup\",\n            \"size\": 435,\n            \"sold\": 506,\n            \"views\": 4349\n        },\n        {\n            \"title\": \"facilisi cras\",\n            \"description\": \"Aenean sit amet justo. Morbi ut odio.\",\n            \"howToUse\": \"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.\",\n            \"brand\": \"6107eab2ff5a35052e38377c\",\n            \"stock\": 4480,\n            \"fakeCost\": 4172,\n            \"actualCost\": 869,\n            \"form\": \"Tablet\",\n            \"productType\": \"Powder\",\n            \"size\": 273,\n            \"sold\": 1909,\n            \"views\": 4314\n        },\n        {\n            \"title\": \"rutrum ac lobortis\",\n            \"description\": \"Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est.\",\n            \"howToUse\": \"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\",\n            \"brand\": \"6107eab2ff5a35052e38377d\",\n            \"stock\": 1998,\n            \"fakeCost\": 6041,\n            \"actualCost\": 5694,\n            \"form\": \"Liquid\",\n            \"productType\": \"Tablet\",\n            \"size\": 63,\n            \"sold\": 3413,\n            \"views\": 3261\n        },\n        {\n            \"title\": \"dignissim\",\n            \"description\": \"Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc.\",\n            \"howToUse\": \"Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue.\",\n            \"brand\": \"6107eab2ff5a35052e383783\",\n            \"stock\": 3142,\n            \"fakeCost\": 3264,\n            \"actualCost\": 7118,\n            \"form\": \"Tablet\",\n            \"productType\": \"Powder\",\n            \"size\": 315,\n            \"sold\": 3905,\n            \"views\": 5545\n        },\n        {\n            \"title\": \"at ipsum\",\n            \"description\": \"Morbi non quam nec dui luctus rutrum.\",\n            \"howToUse\": \"Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.\",\n            \"brand\": \"6107eab2ff5a35052e383781\",\n            \"stock\": 7804,\n            \"fakeCost\": 694,\n            \"actualCost\": 8634,\n            \"form\": \"Cream\",\n            \"productType\": \"Syrup\",\n            \"size\": 465,\n            \"sold\": 2332,\n            \"views\": 7852\n        },\n        {\n            \"title\": \"interdum\",\n            \"description\": \"Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.\",\n            \"howToUse\": \"Phasellus id sapien in sapien iaculis congue.\",\n            \"brand\": \"6107eab2ff5a35052e383780\",\n            \"stock\": 6222,\n            \"fakeCost\": 4904,\n            \"actualCost\": 5151,\n            \"form\": \"Powder\",\n            \"productType\": \"Syrup\",\n            \"size\": 85,\n            \"sold\": 1192,\n            \"views\": 3480\n        },\n        {\n            \"title\": \"quam\",\n            \"description\": \"Quisque id justo sit amet sapien dignissim vestibulum.\",\n            \"howToUse\": \"Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci.\",\n            \"brand\": \"6107eab2ff5a35052e383782\",\n            \"stock\": 4741,\n            \"fakeCost\": 4960,\n            \"actualCost\": 3405,\n            \"form\": \"Cream\",\n            \"productType\": \"Tablet\",\n            \"size\": 35,\n            \"sold\": 1235,\n            \"views\": 2125\n        },\n        {\n            \"title\": \"fusce lacus purus\",\n            \"description\": \"Duis at velit eu est congue elementum.\",\n            \"howToUse\": \"Donec posuere metus vitae ipsum.\",\n            \"brand\": \"6107eab2ff5a35052e38377e\",\n            \"stock\": 7052,\n            \"fakeCost\": 5048,\n            \"actualCost\": 8122,\n            \"form\": \"Syrup\",\n            \"productType\": \"Liquid\",\n            \"size\": 319,\n            \"sold\": 4951,\n            \"views\": 5015\n        },\n        {\n            \"title\": \"in faucibus orci\",\n            \"description\": \"Aliquam non mauris. Morbi non lectus.\",\n            \"howToUse\": \"Etiam justo. Etiam pretium iaculis justo.\",\n            \"brand\": \"6107eab2ff5a35052e38377f\",\n            \"stock\": 8643,\n            \"fakeCost\": 5426,\n            \"actualCost\": 3072,\n            \"form\": \"Syrup\",\n            \"productType\": \"Cream\",\n            \"size\": 368,\n            \"sold\": 4486,\n            \"views\": 669\n        },\n        {\n            \"title\": \"congue risus semper\",\n            \"description\": \"Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\",\n            \"howToUse\": \"Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\",\n            \"brand\": \"6107eab2ff5a35052e38377c\",\n            \"stock\": 5671,\n            \"fakeCost\": 5577,\n            \"actualCost\": 5928,\n            \"form\": \"Powder\",\n            \"productType\": \"Liquid\",\n            \"size\": 15,\n            \"sold\": 3731,\n            \"views\": 7338\n        },\n        {\n            \"title\": \"luctus nec molestie\",\n            \"description\": \"Nunc rhoncus dui vel sem. Sed sagittis.\",\n            \"howToUse\": \"Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.\",\n            \"brand\": \"6107eab2ff5a35052e38377d\",\n            \"stock\": 9070,\n            \"fakeCost\": 6851,\n            \"actualCost\": 4193,\n            \"form\": \"Liquid\",\n            \"productType\": \"Tablet\",\n            \"size\": 283,\n            \"sold\": 2819,\n            \"views\": 7108\n        },\n        {\n            \"title\": \"gravida\",\n            \"description\": \"Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.\",\n            \"howToUse\": \"Nunc nisl.\",\n            \"brand\": \"6107eab2ff5a35052e383783\",\n            \"stock\": 3555,\n            \"fakeCost\": 6191,\n            \"actualCost\": 922,\n            \"form\": \"Liquid\",\n            \"productType\": \"Powder\",\n            \"size\": 316,\n            \"sold\": 2495,\n            \"views\": 2422\n        },\n        {\n            \"title\": \"pulvinar lobortis est\",\n            \"description\": \"Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\",\n            \"howToUse\": \"Pellentesque at nulla.\",\n            \"brand\": \"6107eab2ff5a35052e383781\",\n            \"stock\": 8568,\n            \"fakeCost\": 6023,\n            \"actualCost\": 7790,\n            \"form\": \"Cream\",\n            \"productType\": \"Liquid\",\n            \"size\": 338,\n            \"sold\": 1714,\n            \"views\": 6667\n        },\n        {\n            \"title\": \"metus sapien ut\",\n            \"description\": \"Pellentesque at nulla.\",\n            \"howToUse\": \"Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\",\n            \"brand\": \"6107eab2ff5a35052e383780\",\n            \"stock\": 5302,\n            \"fakeCost\": 69,\n            \"actualCost\": 7175,\n            \"form\": \"Powder\",\n            \"productType\": \"Cream\",\n            \"size\": 173,\n            \"sold\": 339,\n            \"views\": 4607\n        },\n        {\n            \"title\": \"venenatis tristique\",\n            \"description\": \"Nulla facilisi.\",\n            \"howToUse\": \"Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\",\n            \"brand\": \"6107eab2ff5a35052e383782\",\n            \"stock\": 5744,\n            \"fakeCost\": 7653,\n            \"actualCost\": 5729,\n            \"form\": \"Powder\",\n            \"productType\": \"Cream\",\n            \"size\": 348,\n            \"sold\": 3002,\n            \"views\": 6869\n        },\n        {\n            \"title\": \"in tempor turpis\",\n            \"description\": \"Duis mattis egestas metus.\",\n            \"howToUse\": \"Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\",\n            \"brand\": \"6107eab2ff5a35052e38377e\",\n            \"stock\": 5998,\n            \"fakeCost\": 3479,\n            \"actualCost\": 5615,\n            \"form\": \"Syrup\",\n            \"productType\": \"Syrup\",\n            \"size\": 143,\n            \"sold\": 3077,\n            \"views\": 7365\n        },\n        {\n            \"title\": \"mauris\",\n            \"description\": \"Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum.\",\n            \"howToUse\": \"Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis.\",\n            \"brand\": \"6107eab2ff5a35052e38377f\",\n            \"stock\": 5127,\n            \"fakeCost\": 3202,\n            \"actualCost\": 7614,\n            \"form\": \"Cream\",\n            \"productType\": \"Liquid\",\n            \"size\": 60,\n            \"sold\": 3933,\n            \"views\": 7030\n        },\n        {\n            \"title\": \"convallis\",\n            \"description\": \"Integer ac neque. Duis bibendum.\",\n            \"howToUse\": \"Donec vitae nisi.\",\n            \"brand\": \"6107eab2ff5a35052e38377c\",\n            \"stock\": 8954,\n            \"fakeCost\": 3022,\n            \"actualCost\": 981,\n            \"form\": \"Tablet\",\n            \"productType\": \"Syrup\",\n            \"size\": 428,\n            \"sold\": 1483,\n            \"views\": 7637\n        },\n        {\n            \"title\": \"amet justo morbi\",\n            \"description\": \"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue.\",\n            \"howToUse\": \"Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\",\n            \"brand\": \"6107eab2ff5a35052e38377d\",\n            \"stock\": 6629,\n            \"fakeCost\": 8478,\n            \"actualCost\": 2639,\n            \"form\": \"Powder\",\n            \"productType\": \"Syrup\",\n            \"size\": 434,\n            \"sold\": 3507,\n            \"views\": 5465\n        },\n        {\n            \"title\": \"vestibulum sit amet\",\n            \"description\": \"In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\",\n            \"howToUse\": \"Donec dapibus. Duis at velit eu est congue elementum. In hac habitasse platea dictumst.\",\n            \"brand\": \"6107eab2ff5a35052e383783\",\n            \"stock\": 584,\n            \"fakeCost\": 500,\n            \"actualCost\": 8160,\n            \"form\": \"Cream\",\n            \"productType\": \"Liquid\",\n            \"size\": 194,\n            \"sold\": 3599,\n            \"views\": 3340\n        },\n        {\n            \"title\": \"dolor morbi\",\n            \"description\": \"Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo. Aliquam quis turpis eget elit sodales scelerisque.\",\n            \"howToUse\": \"Suspendisse potenti. In eleifend quam a odio.\",\n            \"brand\": \"6107eab2ff5a35052e383781\",\n            \"stock\": 8822,\n            \"fakeCost\": 734,\n            \"actualCost\": 2834,\n            \"form\": \"Cream\",\n            \"productType\": \"Syrup\",\n            \"size\": 291,\n            \"sold\": 1164,\n            \"views\": 5279\n        },\n        {\n            \"title\": \"auctor gravida sem\",\n            \"description\": \"Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula.\",\n            \"howToUse\": \"In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\",\n            \"brand\": \"6107eab2ff5a35052e383780\",\n            \"stock\": 6970,\n            \"fakeCost\": 8456,\n            \"actualCost\": 5027,\n            \"form\": \"Cream\",\n            \"productType\": \"Syrup\",\n            \"size\": 211,\n            \"sold\": 1416,\n            \"views\": 5102\n        },\n        {\n            \"title\": \"nulla tellus\",\n            \"description\": \"Morbi non quam nec dui luctus rutrum.\",\n            \"howToUse\": \"Aliquam erat volutpat.\",\n            \"brand\": \"6107eab2ff5a35052e383782\",\n            \"stock\": 1719,\n            \"fakeCost\": 5163,\n            \"actualCost\": 6668,\n            \"form\": \"Tablet\",\n            \"productType\": \"Cream\",\n            \"size\": 33,\n            \"sold\": 1591,\n            \"views\": 3589\n        },\n        {\n            \"title\": \"vitae consectetuer\",\n            \"description\": \"Phasellus in felis. Donec semper sapien a libero.\",\n            \"howToUse\": \"Pellentesque viverra pede ac diam.\",\n            \"brand\": \"6107eab2ff5a35052e38377e\",\n            \"stock\": 2342,\n            \"fakeCost\": 3359,\n            \"actualCost\": 6983,\n            \"form\": \"Liquid\",\n            \"productType\": \"Tablet\",\n            \"size\": 134,\n            \"sold\": 2160,\n            \"views\": 6357\n        },\n        {\n            \"title\": \"ut\",\n            \"description\": \"In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.\",\n            \"howToUse\": \"Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus.\",\n            \"brand\": \"6107eab2ff5a35052e38377f\",\n            \"stock\": 7521,\n            \"fakeCost\": 564,\n            \"actualCost\": 6076,\n            \"form\": \"Cream\",\n            \"productType\": \"Syrup\",\n            \"size\": 6,\n            \"sold\": 2115,\n            \"views\": 6840\n        },\n        {\n            \"title\": \"turpis nec\",\n            \"description\": \"Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet.\",\n            \"howToUse\": \"Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst.\",\n            \"brand\": \"6107eab2ff5a35052e38377c\",\n            \"stock\": 9108,\n            \"fakeCost\": 5702,\n            \"actualCost\": 6945,\n            \"form\": \"Tablet\",\n            \"productType\": \"Tablet\",\n            \"size\": 167,\n            \"sold\": 2105,\n            \"views\": 1485\n        },\n        {\n            \"title\": \"semper\",\n            \"description\": \"In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.\",\n            \"howToUse\": \"Morbi ut odio.\",\n            \"brand\": \"6107eab2ff5a35052e38377d\",\n            \"stock\": 3348,\n            \"fakeCost\": 4974,\n            \"actualCost\": 5737,\n            \"form\": \"Powder\",\n            \"productType\": \"Liquid\",\n            \"size\": 328,\n            \"sold\": 950,\n            \"views\": 1283\n        },\n        {\n            \"title\": \"nulla facilisi cras\",\n            \"description\": \"Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim.\",\n            \"howToUse\": \"In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.\",\n            \"brand\": \"6107eab2ff5a35052e383783\",\n            \"stock\": 46,\n            \"fakeCost\": 7105,\n            \"actualCost\": 6646,\n            \"form\": \"Tablet\",\n            \"productType\": \"Liquid\",\n            \"size\": 287,\n            \"sold\": 489,\n            \"views\": 3745\n        },\n        {\n            \"title\": \"in est risus\",\n            \"description\": \"Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl.\",\n            \"howToUse\": \"Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia.\",\n            \"brand\": \"6107eab2ff5a35052e383781\",\n            \"stock\": 8743,\n            \"fakeCost\": 3708,\n            \"actualCost\": 6706,\n            \"form\": \"Liquid\",\n            \"productType\": \"Liquid\",\n            \"size\": 390,\n            \"sold\": 1576,\n            \"views\": 1669\n        },\n        {\n            \"title\": \"aliquam\",\n            \"description\": \"In hac habitasse platea dictumst.\",\n            \"howToUse\": \"Vivamus in felis eu sapien cursus vestibulum. Proin eu mi.\",\n            \"brand\": \"6107eab2ff5a35052e383780\",\n            \"stock\": 7708,\n            \"fakeCost\": 4681,\n            \"actualCost\": 270,\n            \"form\": \"Cream\",\n            \"productType\": \"Syrup\",\n            \"size\": 152,\n            \"sold\": 3226,\n            \"views\": 5680\n        },\n        {\n            \"title\": \"viverra\",\n            \"description\": \"Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo.\",\n            \"howToUse\": \"Vivamus vestibulum sagittis sapien.\",\n            \"brand\": \"6107eab2ff5a35052e383782\",\n            \"stock\": 2312,\n            \"fakeCost\": 3538,\n            \"actualCost\": 587,\n            \"form\": \"Liquid\",\n            \"productType\": \"Powder\",\n            \"size\": 317,\n            \"sold\": 1118,\n            \"views\": 2154\n        },\n        {\n            \"title\": \"tellus\",\n            \"description\": \"Vestibulum rutrum rutrum neque.\",\n            \"howToUse\": \"Quisque porta volutpat erat.\",\n            \"brand\": \"6107eab2ff5a35052e38377e\",\n            \"stock\": 6969,\n            \"fakeCost\": 8610,\n            \"actualCost\": 6250,\n            \"form\": \"Liquid\",\n            \"productType\": \"Liquid\",\n            \"size\": 425,\n            \"sold\": 2609,\n            \"views\": 4340\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5600/api/addBulkProducts",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"api",
+								"addBulkProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pharmashopURL}}/api/deleteProduct",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"deleteProduct"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UsersAPI",
+			"item": [
+				{
+					"name": "Add User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\":\"+923101234567\",\n    \"city\":\"Karachi\",\n    \"fName\":\"Test User\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/addUser",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"addUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send OTP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\":\"+923101234567\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/sendOtp",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"sendOtp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/searchUsers",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"searchUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify OTP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"60a66841e8a2d952b18b07d3\",\n    \"number\":6910\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/verifyOTP",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"verifyOTP"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"60a667c8e8a2d952b18b07d2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/getUserData",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"getUserData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Block User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"60a667c8e8a2d952b18b07d2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/blockUser",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"blockUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unblock User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"60a667c8e8a2d952b18b07d2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/unblockUser",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"unblockUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Address",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"id\":\"60a667c8e8a2d952b18b07d2\",\n        \"name\":\"Address 1\",\n        \"address\":\"Safari Park, University Road, Karachi\",\n        \"longitude\":67.1076,\n        \"latitude\":24.9255\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/addAddress",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"addAddress"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Uers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://30feed72e70c.ngrok.io/api/users1",
+							"protocol": "https",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"users1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send email OTP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"testing.dreamerz@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pharmashopURL}}/api/sendEmailOtp",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"sendEmailOtp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Email OTP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"60ef21cd8cd79516e1bf5cfa\",\n    \"number\":9373\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pharmashopURL}}/api/verifyEmailOTP",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"verifyEmailOTP"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Email Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pharmashopURL}}/api/emailLogin",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"emailLogin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users Register count per day of last 30 days",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{pharmashopURL}}/api/getlast30daysusersregistercountperday",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"getlast30daysusersregistercountperday"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"\",\n    \"fName\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pharmashopURL}}/api/updateUser",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"updateUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pharmashopURL}}/api/logoutUser",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"logoutUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Notification",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\":\"\",\n    \"title\":\"\",\n    \"text\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pharmashopURL}}/api/sendAdminNotification",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"sendAdminNotification"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ZonesAPI",
+			"item": [
+				{
+					"name": "Add Zone",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Gulshan-e-Iqbal\",\n    \"longitude\": 67.0779188,\n    \"latitude\": 24.904743,\n    \"deliveryRange\": [\n        {\n            \"from\": 0,\n            \"to\": 30,\n            \"charges\": 18\n        },\n        {\n            \"from\": 31,\n            \"to\": 60,\n            \"charges\": 46\n        },\n        {\n            \"from\": 61,\n            \"to\": 100,\n            \"charges\": 113\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pharmashopURL}}/api/addZone",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"addZone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Zones",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/getAllZones",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"getAllZones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nearest Zone",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"longitude\":67.073728,\n    \"latitude\":24.902185\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/getNearestZone",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"getNearestZone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Zone",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"zone\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/searchZones",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"searchZones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enabled Zones",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{pharmashopURL}}/api/getAllEnabledZones",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"getAllEnabledZones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Disable Zone",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"60a799989b9a062322162ff9\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/disableZone",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"disableZone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enable Zone",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"60a799989b9a062322162ff9\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/enableZone",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"enableZone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Zone",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"60a799989b9a062322162ff9\",\n    \"name\": \"Gulshan-e-Iqbal Block 7\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/updateZone",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"updateZone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update location",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/updateLocation",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"updateLocation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Prices",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/bulkLocationPrices",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"bulkLocationPrices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Calculate Charges",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"longitude\":67.1076,\n    \"latitude\":24.9255\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pharmashopURL}}/api/calculateCharges",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"calculateCharges"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Calculate Nearest Charges",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"longitude\":67.1076,\n    \"latitude\":24.9255\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pharmashopURL}}/api/nearestZoneCharges",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"nearestZoneCharges"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OrdersAPI",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\":\"60a667c8e8a2d952b18b07d2\",\n    \"items\":[{\n        \"item\":\"60a64d4f00498a060d6a06b0\",\n        \"quantity\":3,\n        \"unitPrice\":2550\n    },{\n        \"item\":\"60a64d4f00498a060d6a06af\",\n        \"quantity\":3,\n        \"unitPrice\":1327\n    },{\n        \"item\":\"60a64d4f00498a060d6a06b1\",\n        \"quantity\":1,\n        \"unitPrice\":425\n    }],\n    \"total\":12076,\n    \"zoneCharges\":20,\n    \"addressDetails\":{\n        \"address\":\"Hassan Apartments\",\n        \"location\":[67.071325,24.902623],\n        \"zone\":\"60a799989b9a062322162ff9\",\n        \"instructions\":\"Be quick\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/createOrder",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"createOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current Orders",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\":\"60a667c8e8a2d952b18b07d2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/getCurrentOrders",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"getCurrentOrders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Past Orders",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\":\"60a667c8e8a2d952b18b07d2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/getPastOrders",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"getPastOrders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order Status",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"60a7a3633a232e25e3786662\",\n    \"status\":1   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/updateOrderStatus",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"updateOrderStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Peding Orders",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/allPendingOrders1",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"allPendingOrders1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order by OrderID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orderId\":75988\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pharmashopURL}}/api/searchOrderByID",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"searchOrderByID"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View order per day count of last 15 days",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5600/api/getlast15daysorderscountperday",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"api",
+								"getlast15daysorderscountperday"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get completed orders earning of last 30 days  per daya count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{pharmashopURL}}/api/getlast30daysearningcountperday",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"getlast30daysearningcountperday"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get orders count per day of last 30 days",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{pharmashopURL}}/api/getlast30daysorderscountperday",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"getlast30daysorderscountperday"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Analytics PS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{pharmashopURL}}/api/adminanalytics",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"adminanalytics"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OrderRequests API",
+			"item": [
+				{
+					"name": "Create Order Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user",
+									"value": "60a667c8e8a2d952b18b07d2",
+									"type": "text"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": [
+										"/Users/ishop/Downloads/pain relief.jpeg",
+										"/Users/ishop/Downloads/allergy.jpeg",
+										"/Users/ishop/Downloads/beauty.jpeg"
+									]
+								},
+								{
+									"key": "city",
+									"value": "Karachi",
+									"type": "text"
+								},
+								{
+									"key": "notes",
+									"value": "This is a test Order request 3",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Hassan Square Apartment",
+									"type": "text"
+								},
+								{
+									"key": "longitude",
+									"value": "67.071325",
+									"type": "text"
+								},
+								{
+									"key": "latitude",
+									"value": "24.902623",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/addOrderRequest",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"addOrderRequest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Order Requests",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\":\"60a667c8e8a2d952b18b07d2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/getUserOrderRequests",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"getUserOrderRequests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reject Order Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"60a7ba2afaa7712be55fa6ec\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/rejectOrderRequest",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"rejectOrderRequest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order Requests",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/orderRequests1",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"orderRequests1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order Request By OrderID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orderId\":81157\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pharmashopURL}}/api/orderRequestByOrderID",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"orderRequestByOrderID"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin API",
+			"item": [
+				{
+					"name": "Create Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"admin@pharmashop.com\",\n    \"password\":\"windowz10\"   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pharmashopURL}}/api/createAdmin",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"createAdmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"admin@pharmashop.com\",\n    \"password\":\"windowz10\"   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://30feed72e70c.ngrok.io/api/adminLogin",
+							"protocol": "http",
+							"host": [
+								"30feed72e70c",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"adminLogin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Admin Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"email\":\"\",\n    \"password\":\"\",\n    \"newPass\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://4046-178-18-244-82.ngrok.io//api/updateAdminPassword",
+							"protocol": "https",
+							"host": [
+								"4046-178-18-244-82",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"",
+								"api",
+								"updateAdminPassword"
+							]
+						},
+						"description": "Change Admin Password"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OffersAPI",
+			"item": [
+				{
+					"name": "Create Offer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "15% Off",
+									"type": "text"
+								},
+								{
+									"key": "validTill",
+									"value": "2021-08-25T16:12:00.342Z",
+									"type": "text"
+								},
+								{
+									"key": "discountPercent",
+									"value": "15",
+									"type": "text"
+								},
+								{
+									"key": "fileData",
+									"type": "file",
+									"src": "/Users/ishop/Downloads/random.webp"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{pharmashopURL}}/api/addOffer",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"addOffer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enabled Offers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{pharmashopURL}}/api/enabledOFfers",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"enabledOFfers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check offer validity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"offerCode\":\"ZXK6BP2B\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pharmashopURL}}/api/checkOfferValidity",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"checkOfferValidity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Offers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{pharmashopURL}}/api/getAllOfers1",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"getAllOfers1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Offer Status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"60ef3fa80c0edb504b7265b5\",\n    \"enabled\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{pharmashopURL}}/api/updateOfferStatus",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"updateOfferStatus"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "NotificationsAPI",
+			"item": [
+				{
+					"name": "Bulk Notifications",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:5600/api/bulkNotifications",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"api",
+								"bulkNotifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Latest Notifications",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{pharmashopURL}}/api/latestNotifications",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"latestNotifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Notifications",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{pharmashopURL}}/api/getNotifications1",
+							"host": [
+								"{{pharmashopURL}}"
+							],
+							"path": [
+								"api",
+								"getNotifications1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create New order requests",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": \"60a667c8e8a2d952b18b07d2\",\n    \"city\": \"Karachi\",\n    \"notes\": \"ifsdj jdospjfs\",\n    \"address\": \"Hassan Square Apartment\",\n    \"longitude\": 67.071325,\n    \"latitude\": 24.902623,\n    \"images\": [\n        \"files-1626467454088\",\n        \"files-1626467454103\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{pharmashopURL}}/api/createNewOrderRequest",
+					"host": [
+						"{{pharmashopURL}}"
+					],
+					"path": [
+						"api",
+						"createNewOrderRequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Single File PS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fileData",
+							"type": "file",
+							"src": "/Users/ishop/Downloads/210359810_204273655032387_8156099702652963784_n.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{pharmashopURL}}/api/uploadFile",
+					"host": [
+						"{{pharmashopURL}}"
+					],
+					"path": [
+						"api",
+						"uploadFile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Multiple Files PS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": [
+								"/Users/ishop/Downloads/random.webp",
+								"/Users/ishop/Downloads/random (1).webp",
+								"/Users/ishop/Downloads/random (2).webp",
+								"/Users/ishop/Downloads/random (3).webp",
+								"/Users/ishop/Downloads/random (4).webp",
+								"/Users/ishop/Downloads/random (5).webp",
+								"/Users/ishop/Downloads/random (6).webp",
+								"/Users/ishop/Downloads/random (7).webp"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "{{pharmashopURL}}/api/uploadMultipleFiles",
+					"host": [
+						"{{pharmashopURL}}"
+					],
+					"path": [
+						"api",
+						"uploadMultipleFiles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generate pdf jaltech",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://178.18.244.82:5000/jeltech/generatepdf",
+					"protocol": "http",
+					"host": [
+						"178",
+						"18",
+						"244",
+						"82"
+					],
+					"port": "5000",
+					"path": [
+						"jeltech",
+						"generatepdf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "udhsi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://3c10-75-119-139-19.ngrok.io/jeltech/ss",
+					"protocol": "https",
+					"host": [
+						"3c10-75-119-139-19",
+						"ngrok",
+						"io"
+					],
+					"path": [
+						"jeltech",
+						"ss"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "pharmashopURL",
+			"value": "https://4046-178-18-244-82.ngrok.io/"
+		}
+	]
+}
